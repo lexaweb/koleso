@@ -1,0 +1,201 @@
+@import '../mixins/media';
+.header {
+  padding: 10px 0;
+  .top-header {
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    font: 400 12px/22px $font;
+    color: #555555;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      top: 36px;
+      background: #E5E5E5;
+    }
+    a {
+      display: inline-flex;
+      margin-right: 25px;
+      align-items: center;
+    }
+    .my-city {
+      display: flex;
+      a {
+        span {
+          position: relative;
+          &:before {
+            content: '';
+            border-bottom: 1px dotted #555555;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 4px;
+          }
+        }
+      }
+      .icon-point-map {
+        width: 14px;
+        height: 17px;
+        margin-right: 11px;
+      }
+    }
+    .icon-arrow {
+      width: 7px;
+      height: 4px;
+      margin-left: 5px;
+    }
+    .icon-star {
+      width: 18px;
+      height: 17.19px;
+      margin-right: 8px;
+    }
+    .etc-inf {
+      display: flex;
+      .stock {
+        span {
+          color: #E22F22;
+        }
+      }
+      .office {
+        span {
+          position: relative;
+          &:before {
+            content: '';
+            border-bottom: 1px dotted #555555;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 4px;
+          }
+        }
+        
+      }
+    }
+  }
+  
+  .center-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    align-items: center;
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        margin-right: 10px;
+        a {
+          .icon-logo {
+            width: 210px;
+            height: 44px;
+          }
+        }
+      }
+      .tire-service {
+        margin-right: 15px;
+        a {
+          color: #222222;
+          padding: 6px 26px;
+          background: #EFEFEF;
+          border-radius: 5px;
+          .icon-car-wheel {
+            width: 28px;
+            height: 28px;
+            margin-right: 20px;
+          }
+          p {
+            display: inline-block;
+            font: 400 12px/16px $font;
+            span {
+              display: block;
+              font: 700 12px/16px $font;
+            }
+          }
+          
+        }
+      }
+
+      .auto-repait {
+        a {
+          font: 400 12px/16px $font;
+          color: #222222;
+          padding: 6px 26px;
+          background: #EFEFEF;
+          border-radius: 5px;
+          .icon-customer-support {
+            width: 28px;
+            height: 28px;
+            margin-right: 20px;
+          }
+          p {
+            display: inline-block;
+            font: 400 12px/16px $font;
+            span {
+              display: block;
+              font: 700 12px/16px $font;
+            }
+          }
+        }
+      }
+
+      .compare {
+        a {
+          .icon-compare {
+            width: 20px;
+            height: 20px;
+
+          }
+        }
+      }
+
+      .heart {
+        margin: 0 25px;
+        a {
+          .icon-heart {
+            width: 24px;
+            height: 23.46px;
+          }
+        }
+      }
+      .shopping-cart {
+        a {
+          position: relative;
+          .icon-shopping-cart {
+            width: 24px;
+            height: 24px;
+          }
+          span {
+            position: absolute;
+            text-align: center;
+            border-radius: 50%;
+            background: #E22F22;
+            font: 400 13px/22px $font;
+            color: #FFFFFF;
+            top: -14px;
+            right: -9px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      .phone {
+        font: 400 14px/22px $font;
+        color: #222222;
+        margin: 0 15px;
+      }
+      .request {
+        font: 400 11px/16px $font;
+        a {
+          padding: 14px 20px;
+          border: 1px solid #E22F22;
+          border-radius: 5px;
+          color: #E22F22;
+        }
+      }
+    }
+  }
+}

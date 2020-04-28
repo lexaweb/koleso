@@ -1,0 +1,19 @@
+@import 'common/header';
+@import 'common/global';
+@import 'common/footer';
+
+body {
+  .wrapper {
+    .inner {
+      max-width: 1140px;
+      div {
+        p {
+          font: 300 18px/1.5 $font;
+        }
+      }
+      .swiper-container {
+        height: 200px;
+      }
+    }
+  }
+}
