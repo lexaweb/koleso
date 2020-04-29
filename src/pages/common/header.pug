@@ -8,49 +8,175 @@ header.header
         a(href="/") 49 центров: выбрать свой
           +icon('arrow')  
       .etc-inf
-        a(href="/") Доставка и оплата
-          +icon('arrow')
-        a(href="/") Покупателю
-          +icon('arrow')
+        .dropdown
+          a(href="/") Доставка и оплата
+            +icon('arrow')
+          .dropdown-hover
+            span
+            a(href="/") Как заказать
+            a(href="/") Как оплатить
+            a(href="/") Кредит
+            a(href="/") Рассрочка
+            a(href="/") Возврат
+        .dropdown
+          .dropdown-hover.shoper
+            span
+            a(href="/") Расширенная гарантия
+            a(href="/") Дисконтная программа
+            a(href="/") Отзывы о магазинах
+            a(href="/") Отзывы о товаре
+            a(href="/") Тесты
+          a(href="/") Покупателю
+            +icon('arrow')
         a.stock(href="/") 
           +icon('star')
           span Акции
         a(href="/") Наши центры
         a.office(href="/") 
           span Мой кабинет
-    .center-header
-      .item
-        .logo
-          a(href="/")
-            +icon('logo')
-        .phone
-          a(href="/") 8 (800) 100-68-78 
-          a(href="/") 8 (495) 544-02-02
-        .request
-          a(href="/") Заказать звонок
-      .item
-        .tire-service
-          a(href="/")
-            +icon('car-wheel')  
-            p Записаться 
-               span на шиномонтаж
-        .auto-repait
-          a(href="/")
-            +icon('customer-support')
-            p Записаться 
-               span на автосервис
-      .item 
-        .compare
-          a(href="/")
-            +icon('compare')
-        .heart
-          a(href="/")
-            +icon('heart')
-        .shopping-cart
-          a(href="/")
-            +icon('shopping-cart')
-            span 4
-
+  .line
+    .inner
+      .center-header
+        .item
+          .logo
+            a(href="/")
+              +icon('logo')
+          .phone
+            a(href="tel:+78001006878") 8 (800) 100-68-78
+            a(href="tel:+74955440202") 8 (495) 544-02-02
+          .request
+            a(href="/") Заказать звонок
+        .item
+          .tire-service
+            a(href="/")
+              +icon('car-wheel')  
+              p Записаться 
+                 span на шиномонтаж
+          .auto-repait
+            a(href="/")
+              +icon('customer-support')
+              p Записаться 
+                 span на автосервис
+        .item 
+          .compare
+            a(href="/")
+              +icon('compare')
+          .heart
+            a(href="/")
+              +icon('heart')
+          .shopping-cart
+            a(href="/")
+              +icon('shopping-cart')
+              span 4
+      .bottom-header
+        .item
+          a(href="/") шины
+          .bottom-dropdown
+            .block
+              h1
+                a(href="/") Каталог шин
+              a(href="/") Подбор по авто
+              a(href="/") Подбор по параметрам
+            .block
+              a(href="/") Зимние шины
+              a(href="/") Летние шины
+              a(href="/") Комерческии шины
+              a(href="/") Грузовые шины 
+            .block
+              a(href="/") Шины с бесплатным монтажем
+              a(href="/") Распродажа
+              a(href="/") Шинный калькулятор
+            .block
+              a(href="/") 
+                span -10%
+                img(src="img/tires.jpg", alt="")
+                p Купи шины 
+                  strong Cordiant 
+                p со скидкой!
+        .item
+          a(href="/") диски
+          .bottom-dropdown
+            .block
+              h1
+                a(href="/") Каталог дисков
+              a(href="/") Подбор по авто
+              a(href="/") Подбор по параметрам
+            .block
+              a(href="/") Литые диски
+              a(href="/") Штампованные диски
+              a(href="/") Грузовые диски
+              a(href="/") Распродажа
+            .block
+            .block
+              a(href="/") 
+                img(src="img/rims.jpg", alt="")
+                p Распродажа литых дисков 
+                strong RW Classic
+        .item
+          a(href="/") АВТОТОВАРЫ
+          .bottom-dropdown
+            .block
+              a(href="/") Датчики давления шин
+              a(href="/") Инструмент 
+              a(href="/") Электротовары
+            .block
+              a(href="/") Щетки стеклоочистителя
+              a(href="/") Кресла детские
+              a(href="/") Секретки
+            .block
+              a(href="/") Моторные масла
+              a(href="/") Экстерьер
+              a(href="/") Интерьер
+            .block
+              a(href="/") 
+                img(src="img/products.jpg", alt="")
+                p Рассрочка на все покупки в сети 
+                strong КОЛЕСО
+        .item
+          a(href="/") автосервис
+          .bottom-dropdown
+            .block
+              a(href="/") Диагностика
+              a(href="/") Регламентное ТО
+              a(href="/") Жидкости и фильтры
+              a(href="/") Двигатель, система впуска
+              a(href="/") Трансмиссия
+            .block
+              a(href="/") Электрооборудование
+              a(href="/") Кондиционер/климат
+              a(href="/") Тормозная система
+            .block
+              a(href="/") Рулевое управление
+              a(href="/") Ходовая часть
+              a(href="/") Регулеровка развала-схождения
+            .block
+              a(href="/") 
+                img(src="img/Rectangle.jpg", alt="")
+                p Все акции в одном клике! 
+        .item
+          a(href="/") услуги
+          .bottom-dropdown
+            .block
+              a(href="/") Шиномонтаж
+              a(href="/") Сезонное хранение
+              a(href="/") Ремонт шин
+              a(href="/") Дошиповка
+              a(href="/") Грузовой шиномонтаж
+            .block
+              a(href="/") Покраска дисков
+              a(href="/") Ремонт и правка дисков
+            .block
+              a(href="/") Автомойка и детейлинг
+              a(href="/") ...
+            .block
+              a(href="/") 
+                img(src="img/uslugi.jpg", alt="")
+                p Бесплатная диагностика развала-схождения 
+        .search
+          input.search-h(type="text")
+          button(type="submit")
+            +icon('white')
+            +icon('black')
 
 
 

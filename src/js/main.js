@@ -18,3 +18,22 @@ $(document).ready(() => {
     },
   });
 });
+
+$(function(){
+  $('.search-h').click(function(){
+      $('.search-h').addClass('active');
+      $('.icon-black').addClass('active');
+      $('.icon-white').addClass('active');
+  });
+});
+
+$(document).click( function(e){
+  if ( $(e.target).closest('.search-h').length ) {
+      // клик внутри элемента 
+      return;
+  }
+  // клик снаружи элемента 
+  $('.search-h').removeClass('active');
+  $('.icon-black').removeClass('active');
+  $('.icon-white').removeClass('active');
+});
