@@ -1,9 +1,81 @@
 extends common/layout
-
 block variables
   -var pageTitle ='Главная'
-
 block content
   main
-    .inner
-    
+    .inner 
+      .calculator
+        form(action="form", method="post")
+          .row-product
+            .block
+              a(href="") Шины
+              a(href="") Диски
+              a(href="") По авто
+          .row-parameters
+            .block
+              label Ширина
+                span ?
+              select(name="width")
+                option(value="205") 205
+                option(value="210") 210
+                option(value="215") 215
+            span /
+            .block
+              label Высота
+                span ?
+              select(name="height")
+                option(value="55") 55
+                option(value="65") 65
+                option(value="75") 75
+            .block
+              label Диаметр
+                span ?
+              select(name="diameter")
+                option(value="R 15") R 15
+                option(value="R 16") R 16
+                option(value="R 17") R 17
+            .block
+              label Производитель
+                span ?
+              select(name="producer")
+                option(value="все") все 
+                option(value="Производитель 1") Производитель 1
+                option(value="Производитель 2") Производитель 2
+                option(value="Производитель 3") Производитель 3
+          .row-view
+            .season
+              .block
+                label Все 
+                  input(type="checkbox") 
+              .block
+                label Зима 
+                  input(type="checkbox")
+              .block
+                label Лето 
+                  input(type="checkbox")
+              .block
+                label Всесезонные 
+                  input(type="checkbox")
+            .thorns
+              .block
+                label Без шипов
+                  input(type="checkbox")
+              .block
+                label Шипованные 
+                  input(type="checkbox")
+              .block
+                label Не важно
+                  input(type="checkbox")
+          .row-lifetime 
+            .block
+              input(type="checkbox") 
+              label RunFlat
+                span ?
+            .block
+              input(type="checkbox") 
+              label Коммерческие
+            .block
+              input(type="checkbox")
+              label Распродажа
+          .row-select
+            button(type="submit") ПОДОБРАТЬ ШИНЫ
