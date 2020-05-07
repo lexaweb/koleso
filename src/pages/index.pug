@@ -5,67 +5,58 @@ block content
   main
     .inner 
       .calculator.tabs
-        form(action="form", method="post")
           .row-product
             .block-product.tabs__caption
               span.active Шины
               span Диски
               span По авто
-          .tabs__content.active
+          form.tabs__content.active(action="", method="post")
             .row-parameters
               .block-product
                 label Ширина
-                  span ?
-                .list.__select(data-state="") 
-                  .select-arrow-button
-                  .__select__title(data-default="205") 205
-                  .__select__content
-                    input.__select__input(type="radio", name="singleSelect0")
-                    label.__select__label(for="singleSelect0") 205
-                    input.__select__input(type="radio", name="singleSelect1")
-                    label.__select__label(for="singleSelect1") 210
-                    input.__select__input(type="radio", name="singleSelect2")
-                    label.__select__label(for="singleSelect2") 215
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current 205
+                    .select-arrow-button
+                  .select__body
+                    .select__item 205
+                    .select__item 210
+                    .select__item 215
               span.dash /
               .block-product
                 label Высота
-                  span ?
-                .list.__select1(data-state="")
-                  .select-arrow-button
-                  .__select__title(data-default="55") 55
-                  .__select__content
-                    input.__select__input#singleSelect0(type="radio", name="singleSelect0")
-                    label.__select__label(for="singleSelect0") 55
-                    input.__select__input#singleSelect1(type="radio", name="singleSelect1")
-                    label.__select__label(for="singleSelect1") 65
-                    input.__select__input#singleSelect2(type="radio", name="singleSelect2")
-                    label.__select__label(for="singleSelect2") 75
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current 55
+                    .select-arrow-button
+                  .select__body
+                    .select__item 55
+                    .select__item 65
+                    .select__item 75
               .block-product
                 label Диаметр
-                  span ?
-                .list.__select(data-state="")
-                  .select-arrow-button
-                  .__select__title(data-default="R 15") R 15
-                  .__select__content
-                    input.__select__input#singleSelect0(type="radio", name="singleSelect0")
-                    label.__select__label(for="singleSelect0") R 15
-                    input.__select__input#singleSelect1(type="radio", name="singleSelect1")
-                    label.__select__label(for="singleSelect1") R 16
-                    input.__select__input#singleSelect2(type="radio", name="singleSelect2")
-                    label.__select__label(for="singleSelect2") R 17
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current R 15
+                    .select-arrow-button
+                  .select__body
+                    .select__item R 15
+                    .select__item R 16
+                    .select__item R 17
               .block-product
                 label Производитель
-                  span ?
-                .list.__select(data-state="")
-                  .select-arrow-button
-                  .__select__title(data-default="Производитель 1") Производитель 1
-                  .__select__content
-                    input.__select__input#singleSelect0(type="radio", name="singleSelect0")
-                    label.__select__label(for="singleSelect0") Производитель 1
-                    input.__select__input#singleSelect1(type="radio", name="singleSelect1")
-                    label.__select__label(for="singleSelect1") Производитель 2
-                    input.__select__input#singleSelect2(type="radio", name="singleSelect2")
-                    label.__select__label(for="singleSelect2") Производитель 3
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current Производитель 1
+                    .select-arrow-button
+                  .select__body
+                    .select__item Производитель 1
+                    .select__item Производитель 2
+                    .select__item Производитель 3
             .row-view
               .season
                 .block-view
@@ -92,24 +83,64 @@ block content
                   label(for="check7") Не важно
             .row-lifetime 
               .block-lifetime 
-                input#check8(type="radio", name="checkbox3") 
+                input#check8(type="checkbox") 
                 label.check(for="check8")
                 label.text(for="check8") RunFlat
-                  span.question ?
+                  span.question.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
               .block-lifetime 
-                input#check9(type="radio", name="checkbox3") 
+                input#check9(type="checkbox") 
                 label.check(for="check9")
                 label.text(for="check9") Коммерческие
               .block-lifetime 
-                input#check10(type="radio", name="checkbox3")
+                input#check10(type="checkbox")
                 label.check(for="check10")
                 label.text(for="check10") Распродажа
             .row-select
               button(type="submit") ПОДОБРАТЬ ШИНЫ
-          .tabs__content
+          form.tabs__content(action="", method="post")
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
+      .stocks
+        .row-stocks-1
+          .block-stocks
+            p Акции
+            p
+              a(href="") все акции
+        .row-stocks-2
+          .block-stocks-img-1
+            a(href="")
+            p.red ШИНОМОНТАЖ В ПОДАРОК!
+            p.white Все акции в одном клике
+          .block-stocks-img-2
+            a(href="")
+            p.red Скидка на шиномонтаж зимних шин Nokian Nordman - 1 000 руб.
+          .block-stocks-two
+            .block-stocks-img-3
+              a(href="")
+              p.red Бесплатный шиномонтаж зимних шин Viatti
+            .block-stocks-img-4
+              a(href="")
+              p.red Бесплатная диагностика развала-схождения
+      .catalog
+        .row-catalog-1
+          p каталог
+        .row-catalog-2
+          .block-catalog-1
+            a(href="")
+            p шины
+          .block-catalog-2
+            a(href="")
+            p диски
+          .block-catalog-3
+            a(href="")
+            p автотовары
+          .block-catalog-4
+            a(href="")
+            p Услуги
+          .block-catalog-5
+            a(href="")
+            p автосервис

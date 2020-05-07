@@ -36,27 +36,6 @@ $(document).click( function(e){
   $('.icon-white').removeClass('active');
 });
 
-const selectSingle = document.querySelector('.__select');
-const selectSingle_title = selectSingle.querySelector('.__select__title');
-const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
-
-// Toggle menu
-selectSingle_title.addEventListener('click', () => {
-  if ('active' === selectSingle.getAttribute('data-state')) {
-    selectSingle.setAttribute('data-state', '');
-  } else {
-    selectSingle.setAttribute('data-state', 'active');
-  }
-});
-
-// Close when click to option
-for (let i = 0; i < selectSingle_labels.length; i++) {
-  selectSingle_labels[i].addEventListener('click', (evt) => {
-    selectSingle_title.textContent = evt.target.textContent;
-    selectSingle.setAttribute('data-state', '');
-  });
-}
-
 (function($) {
   $(function() {
     
@@ -68,3 +47,42 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
     
   });
   })(jQuery);
+
+
+
+  let select = function () {
+    let selectHeader = document.querySelectorAll('.select__header');
+    let selectItem = document.querySelectorAll('.select__item');
+
+    selectHeader.forEach(item => {
+        item.addEventListener('click', selectToggle)
+    });
+
+    selectItem.forEach(item => {
+        item.addEventListener('click', selectChoose)
+    });
+
+    function selectToggle() {
+        this.parentElement.classList.toggle('is-active');
+    }
+
+    function selectChoose() {
+        let text = this.innerText,
+            select = this.closest('.select'),
+            currentText = select.querySelector('.select__current');
+        currentText.innerText = text;
+        select.classList.remove('is-active');
+
+    }
+
+};
+
+
+select();
+
+$(document).click( function(e){
+  if ( $(e.target).closest('.select').length ) {
+      return;
+  }
+  $('.select').removeClass('is-active');
+});
