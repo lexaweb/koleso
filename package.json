@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Apnoea/gulp-pug-template.git"
+    "url": "git+https://github.com/Apnoea/gulp-pug-template.git"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -54,6 +54,12 @@
     "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
+    "prettier": "^2.0.5",
     "swiper": "^5.3.6"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Apnoea/gulp-pug-template/issues"
+  },
+  "homepage": "https://github.com/Apnoea/gulp-pug-template#readme",
+  "keywords": []
 }

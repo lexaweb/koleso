@@ -86,3 +86,31 @@ $(document).click( function(e){
   }
   $('.select').removeClass('is-active');
 });
+
+
+// function viewObject(objectId){
+//     $('[data-objectId]').removeClass('active');				
+//     $('[data-objectId='+objectId+']').addClass('active');
+
+//     // Выделяем все метки в синий
+//     objectManager.objects.each(function (item) {
+//       objectManager.objects.setObjectOptions(item.id, {
+//           preset: 'islands#blueIcon'
+//       });
+//   });
+
+//   // Выделяем выбранную метку в красный
+//   objectManager.objects.setObjectOptions(objectId, {
+//       preset: 'islands#redDotIcon'
+//   });
+
+//   // Центруем по метке
+//   myMap.setCenter(objectManager.objects.getById(objectId).geometry.coordinates, 15, {
+//       checkZoomRange: true
+//   });
+// }
+
+// $(document).on('click', '[data-objectId]', function(){
+// 	var objectId=$(this).attr('data-objectId');
+// 	viewObject(objectId);
+// });

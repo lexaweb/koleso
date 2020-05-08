@@ -10,7 +10,7 @@ block content
               span.active Шины
               span Диски
               span По авто
-          form.tabs__content.active(action="", method="post")
+          form.tires.tabs__content.active(action="action.php", method="post")
             .row-parameters
               .block-product
                 label Ширина
@@ -97,13 +97,113 @@ block content
                 label.text(for="check10") Распродажа
             .row-select
               button(type="submit") ПОДОБРАТЬ ШИНЫ
-          form.tabs__content(action="", method="post")
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, pariatur facilis. Tempore quam repellat atque neque fuga, facilis corrupti omnis non quas similique, obcaecati accusamus aliquam ad molestias quae asperiores.
+          form.wheels.tabs__content(action="action.php", method="post")
+            .row-parameters
+              .block-product
+                label Диаметр
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current Все
+                    .select-arrow-button
+                  .select__body
+                    .select__item Все
+                    .select__item 13
+                    .select__item 14
+              span.dash 
+              .block-product
+                label PCD
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current Все
+                    .select-arrow-button
+                  .select__body
+                    .select__item Все
+                    .select__item 3*112
+                    .select__item 4*98
+              .block-product
+                label Тип
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current Все
+                    .select-arrow-button
+                  .select__body
+                    .select__item Все
+                    .select__item Литые
+                    .select__item Штампованные
+                    .select__item Кованные
+              .block-product
+                label Производитель
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current Все
+                    .select-arrow-button
+                  .select__body
+                    .select__item Все
+                    .select__item Производитель 1
+                    .select__item Производитель 2
+                    .select__item Производитель 3
+            .row-lifetime 
+              .block-lifetime 
+                input#check11(type="checkbox") 
+                label.check(for="check11")
+                label.text(for="check11") Распродажа
+              .block-lifetime 
+                input#check12(type="checkbox")
+                label.check(for="check12")
+                label.text(for="check12") 4 и более
+            .row-select
+              button(type="submit") ПОДОБРАТЬ ДИСКИ
+          form.by-car.tabs__content(action="action.php", method="post")
+            .row-parameters
+              .block-product
+                label марка
+                .select
+                  .select__header
+                    span.select__current 1 марка
+                    .select-arrow-button
+                  .select__body
+                    .select__item 2 марка
+                    .select__item 3 марка
+                    .select__item 4 марка
+              span.dash 
+              .block-product
+                label Модель
+                .select
+                  .select__header
+                    span.select__current модель 1
+                    .select-arrow-button
+                  .select__body
+                    .select__item модель 1
+                    .select__item модель 2
+                    .select__item модель 3
+              .block-product
+                label Год выпуска
+                .select
+                  .select__header
+                    span.select__current 2000
+                    .select-arrow-button
+                  .select__body
+                    .select__item 2000
+                    .select__item 2001
+                    .select__item 2002
+                    .select__item 2003
+              .block-product
+                label Модификация
+                .select
+                  .select__header
+                    span.select__current Модификация 1
+                    .select-arrow-button
+                  .select__body
+                    .select__item Модификация 1
+                    .select__item Модификация 2
+                    .select__item Модификация 3
+                    .select__item Модификация 4
+            .row-select
+              button(type="submit") ПОДОБРАТЬ ПО АВТО
       .stocks
         .row-stocks-1
           .block-stocks
@@ -144,3 +244,34 @@ block content
           .block-catalog-5
             a(href="")
             p автосервис
+      .map
+        .list
+          h1 Наши центры
+          .list-link-map
+            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
+            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
+            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
+            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
+            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
+            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
+            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
+            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
+        .map-widget
+          iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ace22685a1579759521be196ca5d2b78c71be7b3c67fda3cf342d44e79bde9550&amp;source=constructor")
+      .product-list
+        h1 Мы рекомендуем
+        .row-product-list-1 
+          .block-product-list.tabs__caption
+              span.active Шины
+              span Диски
+              span Сопутсвующие товары
+          .block-product-list
+            p
+              a(href="") показать все
+        .row-product-list-2
+          .block-product-list
+            a(href="")
+            +icon('present')  
+            img(src="img/block-product-wheel.png", alt="")
+            p.name Kumho Ecowing ES01 KH27  
+            p.worth от 9180 ₽
