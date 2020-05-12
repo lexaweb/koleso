@@ -426,6 +426,7 @@
         margin-right: 5px;
         padding-bottom: 2px;
         .search-h {
+          position: relative;
           border: none;
           opacity: 0.35;
           border-radius: 5px;
@@ -434,10 +435,13 @@
           width: 353px;
           height: 34px;
           transition: 0.3s;
+          &:focus {
+            opacity: 1;
+          }
+          &:valid {
+            opacity: 1;
         }
-        .active {
-          opacity: 1;
-        }
+      }
         button {
           border: none;
           opacity: 1;
@@ -448,7 +452,6 @@
           top: 2px;
           width: 33px;
           cursor: pointer;
-  
           svg {
             width: 28px;
             height: 28px;
