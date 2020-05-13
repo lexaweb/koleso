@@ -113,3 +113,18 @@ $(document).click( function(e){
 // 	var objectId=$(this).attr('data-objectId');
 // 	viewObject(objectId);
 // });
+
+var numCount = document.querySelector('.num-count');
+var plusBtn = document.querySelector('.button-plus');
+var minusBtn = document.querySelector('.button-minus');
+plusBtn.onclick = function() {
+  var qty = parseInt(numCount.value);
+  qty = qty + 1;
+  numCount.value = qty;
+}
+minusBtn.onclick = function() {
+  var qty = parseInt(numCount.value);
+  qty = qty - 1;
+  numCount.value = qty;
+}
+

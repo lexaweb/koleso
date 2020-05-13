@@ -268,21 +268,171 @@ block content
           .block-product-list
             p
               a(href="") показать все
-        .row-product-list-2
+        form.row-product-list-2(action="product.php", method="post")
           .block-product-list
-            a(href="")
             +icon('present')  
             img(src="img/block-product-wheel.png", alt="")
             p.name Kumho Ecowing ES01 KH27  
             p.worth от 9180 ₽
-            .block-product-list-hover
-              +icon('like')  
+            a(href="")
+              +icon('like')
+            a(href="")  
               +icon('chart')  
-              span.view Быстрый просмотр
-              p.name Bridgestone Blizzak Spike-01 XL старше 3-х лет 235/55R17 103T
-              .number
-                span.green-1
-                span.green-2
-                span.green-3
-                span.grey
-                p.text 27 шт.
+            .number-hover
+              span.green
+              span.green
+              span.green
+              span.grey
+              p.text 27 шт.
+            p.worth-hover 9180 ₽
+            a.view-hover(href="") 
+              span Быстрый просмотр
+            .row-form
+              .input-group
+                input.button-minus(type="button", value="-")
+                input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                input.button-plus(type="button", value="+")
+              .add-cart
+                button(type="submit")
+                  +icon('add-cart') 
+          .block-product-list
+            +icon('present')  
+            img(src="img/block-product-wheel.png", alt="")
+            p.name Kumho Ecowing ES01 KH27  
+            p.worth от 9180 ₽
+            a(href="")
+              +icon('like')
+            a(href="")  
+              +icon('chart')  
+            .number-hover
+              span.green
+              span.green
+              span.green
+              span.grey
+              p.text 27 шт.
+            p.worth-hover 9180 ₽
+            a.view-hover(href="") 
+              span Быстрый просмотр
+            .row-form
+              .input-group
+                input.button-minus(type="button", value="-")
+                input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                input.button-plus(type="button", value="+")
+              .add-cart
+                button(type="submit")
+                  +icon('add-cart') 
+          .block-product-list
+            +icon('present')  
+            img(src="img/block-product-wheel.png", alt="")
+            p.name Kumho Ecowing ES01 KH27  
+            p.worth от 9180 ₽
+            a(href="")
+              +icon('like')
+            a(href="")  
+              +icon('chart')  
+            .number-hover
+              span.green
+              span.green
+              span.green
+              span.grey
+              p.text 27 шт.
+            p.worth-hover 9180 ₽
+            a.view-hover(href="") 
+              span Быстрый просмотр
+            .row-form
+              .input-group
+                input.button-minus(type="button", value="-")
+                input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                input.button-plus(type="button", value="+")
+              .add-cart
+                button(type="submit")
+                  +icon('add-cart') 
+          .block-product-list
+            +icon('present')  
+            img(src="img/block-product-wheel.png", alt="")
+            p.name Kumho Ecowing ES01 KH27  
+            p.worth от 9180 ₽
+            a(href="")
+              +icon('like')
+            a(href="")  
+              +icon('chart')  
+            .number-hover
+              span.green
+              span.green
+              span.green
+              span.grey
+              p.text 27 шт.
+            p.worth-hover 9180 ₽
+            a.view-hover(href="") 
+              span Быстрый просмотр
+            .row-form
+              .input-group
+                input.button-minus(type="button", value="-")
+                input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                input.button-plus(type="button", value="+")
+              .add-cart
+                button(type="submit")
+                  +icon('add-cart') 
+          .block-product-list
+            +icon('present')  
+            img(src="img/block-product-wheel.png", alt="")
+            p.name Kumho Ecowing ES01 KH27  
+            p.worth от 9180 ₽
+            a(href="")
+              +icon('like')
+            a(href="")  
+              +icon('chart')  
+            .number-hover
+              span.green
+              span.green
+              span.green
+              span.grey
+              p.text 27 шт.
+            p.worth-hover 9180 ₽
+            a.view-hover(href="") 
+              span Быстрый просмотр
+            .row-form
+              .input-group
+                input.button-minus(type="button", value="-")
+                input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                input.button-plus(type="button", value="+")
+              .add-cart
+                button(type="submit")
+                  +icon('add-cart') 
+      .video
+        .row-video-1
+          .block-video
+            h1 ВИДЕО
+          .block-video
+            p
+              a(href="") все видео
+        .row-video-2
+          .block-video-img
+            a(href="")
+            img(src="img/block-video-img-1.png", alt="")
+            p Восстановление и покраска литых дисков
+          .block-video-img
+            a(href="")
+            img(src="img/block-video-img-2.png", alt="")
+            p Шиномонтаж: как выбрать правильно?
+          .block-video-img
+            a(href="")
+            img(src="img/block-video-img-3.png", alt="")
+            p MOMO SUV RF-01 Golden Bronze.
+          .block-video-img
+            a(href="")
+            img(src="img/block-video-img-4.png", alt="")
+            p MOMO SUV RF-02 Titan Silver Brushed.
+          .block-video-img
+            a(href="")
+            img(src="img/block-video-img-5.png", alt="")
+            p Шиномонтаж: как выбрать правильно?
+      .egg
+        h1
+          a(href="") КОЛЕСО.ру
+        h1 - крупнейшая сеть шинных и сервисных центров в России!
+        p 20 лет на шинном рынке! С 1998 года мы прошли длинный путь развития от небольших торговых точек по продаже автомобильных шин и автозапчастей до сети профессиональных шинных и сервисных центров.
+          | По результатам 1-го полугодия 2019 года сеть КОЛЕСО.ру насчитывает более 150 собственных центров в 40 городах России!
+          | Миссия компании: Мы работаем, чтобы сделать Ваш путь комфортным и безопасным, а сервисное и сезонное шиномонтажное обслуживание - качественным и доступным!
+        span 
+          a(href="") Подробнее
