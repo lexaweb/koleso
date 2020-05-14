@@ -1,4 +1,73 @@
 footer.footer
   .inner
-    ul.footer-menu
-      li.footer-menu-item
+    .row-footer-1
+      .block-footer-1
+        p Каталог
+        a(href="") Шины
+        a(href="") Грузовые шины
+        a(href="") Диски
+        a(href="") Услуги
+        a(href="") Автотовары
+      .block-footer-2
+        p Покупателю
+        a(href="") Акции
+        a(href="") Оплата
+        a(href="") Доставка
+        a(href="") Расширенная гарантия
+        a(href="") Дисконтная программа
+      .block-footer-3
+        p О компании
+        a(href="") Вакансии
+        a(href="") Новости
+        a(href="") Статьи
+        a(href="") Партнеры
+        a(href="") Центры КОЛЕСО
+      .block-footer-4
+        p Подписаться на новости
+        form.input-footer(action="email.php", method="post")
+          input(type="email", name="email", placeholder="Ваш e-mail")
+          button(type="submit")
+            +icon('email-outline') 
+        .social-footer
+          p Мы в социальных сетях
+          a(href="")
+            +icon('facebook')
+          a(href="")
+            +icon('vk')
+          a(href="")
+            +icon('instagram')
+          a(href="")
+            +icon('youtube')
+    .row-footer-2
+      .block-footer-1
+        a(href="")
+          +icon('footer-map')
+          span ООО «КОЛЕСО»
+          p 129626, Москва, проспект Мира, д.95, стр.1
+          p ОГРН 1117746030225
+          p ИНН 7717691259
+      .block-footer-2
+        a(href="tel:+8(800)100-68-78")
+          +icon('footer-phone')
+          span 8 (800) 100-68-78
+        a(href="tel:+8(495)544-02-02") 8 (495) 544-02-02
+        a(href="mailto:info@koleso.ru")
+          +icon('footer-envelope') 
+          span info@koleso.ru
+      .block-footer-3
+        .block-img-1
+          a(href="")
+            img(src="img/footer-yandex-market.png", alt="")
+          a(href="")
+            img(src="img/footer-drive2.png", alt="")
+        .block-img-2
+          a(href="")
+            img(src="img/footer-michelin.png", alt="")
+    .row-footer-3
+      .block-footer-1
+        a(href="") 2005-2019 © Сеть шинных и сервисных центров КОЛЕСО.ру
+      .block-footer-2
+        a(href="") Политика конфиденциальности
+      .block-footer-3
+        a(href="") 
+          img(src="img/footer-pay.png", alt="")

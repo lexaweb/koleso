@@ -114,17 +114,38 @@ $(document).click( function(e){
 // 	viewObject(objectId);
 // });
 
-var numCount = document.querySelector('.num-count');
-var plusBtn = document.querySelector('.button-plus');
-var minusBtn = document.querySelector('.button-minus');
-plusBtn.onclick = function() {
-  var qty = parseInt(numCount.value);
-  qty = qty + 1;
-  numCount.value = qty;
-}
-minusBtn.onclick = function() {
-  var qty = parseInt(numCount.value);
-  qty = qty - 1;
-  numCount.value = qty;
-}
+$(function() {
+  (function quantityProducts() {
+    var $quantityArrowMinus = $(".button-minus");
+    var $quantityArrowPlus = $(".button-plus");
 
+    $quantityArrowMinus.click(quantityMinus);
+    $quantityArrowPlus.click(quantityPlus);
+
+    function quantityMinus() {
+      var $quantityNum = $(this).siblings('.num-count');
+      if ($quantityNum.val() > 1) {
+        $quantityNum.val(+$quantityNum.val() - 1);
+      }
+    }
+
+    function quantityPlus() {
+      var $quantityNum = $(this).siblings('.num-count');
+      $quantityNum.val(+$quantityNum.val() + 1);
+    }
+  })();
+});
+
+
+$(document).ready(function(){
+	$('.content_toggle').click(function(){
+		$('.content_block').slideToggle(300, function(){
+			if ($(this).is(':hidden')) {
+				$('.content_toggle').html('Подробнее');
+			} else {
+				$('.content_toggle').html('Скрыть');
+			}							
+		});
+		return false;
+	});
+});
