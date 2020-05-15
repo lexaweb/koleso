@@ -173,6 +173,9 @@
               flex-wrap: wrap;
               padding: 10px 0;
               .block-footer {
+                &-1 {
+                  opacity: 0.5;
+                }
                 &-1, &-2, &-3 {
                   a {
                     font: 400 13px/22px $font;

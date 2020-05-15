@@ -651,33 +651,127 @@ body {
             color: #000;
             margin-bottom: 25px;
           }
+          .scroll-pane
+{width: 300px;
+height: 200px;
+overflow: auto;}
+
+.jspContainer{
+overflow: hidden;
+position: relative;
+}
+
+.jspPane{
+position: absolute;
+}
+
+.jspVerticalBar{
+position: absolute;
+top: 0;
+right: 0;
+width: 10px;
+height: 100%;
+}
+
+.jspHorizontalBar{
+position: absolute;
+bottom: 0;
+left: 0;
+width: 1px;
+height: 16px;
+background: red;
+}
+
+.jspCap{
+display: none;
+}
+
+.jspHorizontalBar .jspCap{
+float: left;
+}
+
+.jspTrack{
+background: #e5e5e5;
+position: relative;
+width: 1px;
+}
+
+.jspDrag{
+background: #e22f22;
+position: relative;
+top: 0;
+left: -2.5px;
+height: 20% !important;
+width: 5px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag{
+float: left;
+height: 100%;
+}
+
+.jspArrow{
+background: #50506d;
+text-indent: -20000px;
+display: block;
+cursor: pointer;
+padding: 0;
+margin: 0;
+}
+
+.jspArrow.jspDisabled{
+cursor: default;
+background: #80808d;
+}
+
+.jspVerticalBar .jspArrow{
+height: 16px;
+}
+
+.jspHorizontalBar .jspArrow{
+width: 10px;
+float: left;
+height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus{
+outline: none;
+}
+
+.jspCorner{
+background: #eeeef4;
+float: left;
+height: 100%;
+}
           .list-link-map {
             overflow-y: auto;
             height: 290px;
             padding-right: 30px;
-            &::-webkit-scrollbar-button {
-              background-image: url('');
-              background-repeat: no-repeat;
-              width: 5px;
-              height: 0;
-            }
-            &::-webkit-scrollbar-track {
-              background: #e5e5e5;
-              border-radius: 5px;
-            }
-            &::-webkit-scrollbar-thumb {
-              border-radius: 5px;
-              background-color: #e22f22;
-            }
-            &::-webkit-resizer {
-              background-image: url('');
-              background-repeat: no-repeat;
-              width: 4px;
-              height: 0;
-            }
-            &::-webkit-scrollbar {
-              width: 5px;
-            }
+            // &::-webkit-scrollbar-button {
+            //   background-image: url('');
+            //   background-repeat: no-repeat;
+            //   width: 5px;
+            //   height: 0;
+            // }
+            // &::-webkit-scrollbar-track {
+            //   background: #e5e5e5;
+            //   border-radius: 5px;
+            // }
+            // &::-webkit-scrollbar-thumb {
+            //   border-radius: 5px;
+            //   background-color: #e22f22;
+            // }
+            // &::-webkit-resizer {
+            //   background-image: url('');
+            //   background-repeat: no-repeat;
+            //   width: 4px;
+            //   height: 0;
+            // }
+            // &::-webkit-scrollbar {
+            //   width: 5px;
+            // }
             .link-map {
               font: 400 13px/22px $font;
               color: #555;
