@@ -340,3 +340,32 @@ $(document).ready(function(){
 		return false;
 	});
 });
+
+$(document).ready(function(){
+    $(".hamburger-mobile").click(function(){
+      $(this).toggleClass("is-active");
+    });
+  });
+
+  $(document).ready(function(){
+    $(".icon-search-mobile").click(function(){
+      $(".search-mobile-active").toggleClass("active");
+    });
+  });
+  $(document).click( function(e){
+    if ( $(e.target).closest('.search-mobile-active, .icon-search-mobile').length ) {
+        return;
+    } 
+    $('.search-mobile-active').removeClass('active');
+  });
+  $(document).ready(function(){
+    $(".icon-close").click(function(){
+      $(".search-mobile-active").removeClass("active");
+    });
+  });
+
+  $(document).ready(function(){  
+    $('.hamburger-mobile, .icon-close').on("click", function(){ 
+        $('.hamburger-mobile-menu').fadeToggle(); 
+    });
+});

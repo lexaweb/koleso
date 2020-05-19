@@ -34,6 +34,9 @@ header.header
         a(href="/") Наши центры
         a.office(href="/") 
           span Мой кабинет
+    .top-header-mobile
+      p Ваш регион: 
+        a(href="") Санкт-Петербург
     .center-header
       .item
         .logo
@@ -66,6 +69,23 @@ header.header
           a(href="/")
             +icon('shopping-cart')
             span 4
+      .mobile
+        .search-mobile
+          +icon('search-mobile')
+          .search-mobile-active
+            .row-search-mobile-active-1 
+              .text Поиск
+              .icon-close
+                +icon('close-mobile')
+            .row-search-mobile-active-2
+              .block-input
+                input(type="text", autofocus)
+                button(type="submit")
+                  +icon('ion-search')
+        .hamburger-mobile
+          span.line
+          span.line
+          span.line
     .bottom-header
       .container
         .item-bottom-header
@@ -112,7 +132,7 @@ header.header
                 p Распродажа литых дисков 
                 strong RW Classic
         .item-bottom-header
-          a(href="/") АВТОТОВАРЫ
+          a(href="/") автотовары
           .bottom-dropdown
             .block
               a(href="/") Датчики давления шин
@@ -176,4 +196,55 @@ header.header
           button(type="submit")
             +icon('white')
             +icon('black')
-            
+    .hamburger-mobile-menu   
+      .hamburger-mobile-menu-block-h1
+        .text МЕНЮ
+        .icon-close
+          +icon('close-mobile')
+      .hamburger-mobile-menu-block-map
+        a(href="")
+          +icon('point-map')
+          p Москва
+      .hamburger-mobile-menu-block-dropdown
+        a(href="") Шины
+          +icon('arrow-right')
+      .hamburger-mobile-menu-block-dropdown
+        a(href="") Диски
+          +icon('arrow-right')
+      .hamburger-mobile-menu-block-dropdown
+        a(href="") Автотовары
+          +icon('arrow-right')
+      .hamburger-mobile-menu-block-dropdown
+        a(href="") Автосервис
+          +icon('arrow-right')
+      .hamburger-mobile-menu-block-dropdown
+        a(href="") Услуги
+          +icon('arrow-right')
+      .hamburger-mobile-menu-block-icon
+        a(href="") 
+          +icon('car-wheel')
+          | Запись на шиномонтаж
+      .hamburger-mobile-menu-block-icon
+        a(href="") 
+          +icon('customer-support')
+          | Запись на автосервис
+      .hamburger-mobile-menu-block-icon
+        a(href="") 
+          +icon('star')
+          | Акции
+      .hamburger-mobile-menu-block-icon
+        a(href="") 
+          +icon('heart')
+          | Избранное
+      .hamburger-mobile-menu-block-icon
+        a(href="") 
+          +icon('compare')
+          | Сравнение
+      .hamburger-mobile-menu-block
+        a(href="") Наши центры
+      .hamburger-mobile-menu-block-dropdown
+        a(href="") Доставка и оплата
+          +icon('arrow-right')
+      .hamburger-mobile-menu-block-dropdown
+        a(href="") Покупателю
+          +icon('arrow-right')
