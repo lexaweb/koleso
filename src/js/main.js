@@ -359,13 +359,33 @@ $(document).ready(function(){
     $('.search-mobile-active').removeClass('active');
   });
   $(document).ready(function(){
-    $(".icon-close").click(function(){
+    $(".icon-close-search").click(function(){
       $(".search-mobile-active").removeClass("active");
     });
   });
 
   $(document).ready(function(){  
-    $('.hamburger-mobile, .icon-close').on("click", function(){ 
+    $('.hamburger-mobile, .icon-close, .close').on("click", function(){ 
         $('.hamburger-mobile-menu').fadeToggle(); 
+        // $('html').css('overflow', 'hidden');
+        $('html').toggleClass('active');
+    });
+    $('.icon-close').on("click", function(){ 
+      $(".hamburger-mobile").removeClass("is-active");
     });
 });
+
+$(document).ready(function(){  
+  $('.hamburger-mobile-menu-block-dropdown, .arrow-left, .close').on("click", function(){ 
+    $(this).toggleClass('active'); 
+      $(".hamburger-mobile").removeClass("is-active");
+      $('.hamburger-mobile-menu').toggleClass('active');
+      return false;
+      
+  });
+  $('.arrow-left, .close').on("click", function()
+  {
+    $('.hamburger-mobile-menu-block-dropdown').removeClass('active'); 
+});
+});
+

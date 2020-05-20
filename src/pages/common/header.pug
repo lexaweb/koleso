@@ -70,12 +70,12 @@ header.header
             +icon('shopping-cart')
             span 4
       .mobile
-        .search-mobile
+        form.search-mobile(action="search.php", method="post") 
           +icon('search-mobile')
           .search-mobile-active
             .row-search-mobile-active-1 
               .text Поиск
-              .icon-close
+              .icon-close-search
                 +icon('close-mobile')
             .row-search-mobile-active-2
               .block-input
@@ -208,9 +208,65 @@ header.header
       .hamburger-mobile-menu-block-dropdown
         a(href="") Шины
           +icon('arrow-right')
+        .block-drop
+          .row-block-drop-h1
+            .arrow-left
+              +icon('arrow-left')
+            .close
+              +icon('close-mobile')
+          .row-block-drop
+            p Шины
+          .row-block-drop
+            a(href="") Каталог шин
+          .row-block-drop
+            a(href="") Подбор по авто
+          .row-block-drop
+            a(href="") Подбор по параметрам
+          .row-block-drop
+            a(href="") Зимние шины
+          .row-block-drop
+            a(href="") Летние шины
+          .row-block-drop
+            a(href="") Коммерческие шины
+          .row-block-drop
+            a(href="") Грузовые шины
+          .row-block-drop
+            a(href="") Шины с бесплатным монтажем
+          .row-block-drop
+            a(href="") Распродажа
+          .row-block-drop
+            a(href="") Шинный калькулятор
       .hamburger-mobile-menu-block-dropdown
         a(href="") Диски
           +icon('arrow-right')
+        .block-drop
+          .row-block-drop-h1
+            .arrow-left
+              +icon('arrow-left')
+            .close
+              +icon('close-mobile')
+          .row-block-drop
+            p Диски
+          .row-block-drop
+            a(href="") Каталог шин
+          .row-block-drop
+            a(href="") Подбор по авто
+          .row-block-drop
+            a(href="") Подбор по параметрам
+          .row-block-drop
+            a(href="") Зимние шины
+          .row-block-drop
+            a(href="") Летние шины
+          .row-block-drop
+            a(href="") Коммерческие шины
+          .row-block-drop
+            a(href="") Грузовые шины
+          .row-block-drop
+            a(href="") Шины с бесплатным монтажем
+          .row-block-drop
+            a(href="") Распродажа
+          .row-block-drop
+            a(href="") Шинный калькулятор
       .hamburger-mobile-menu-block-dropdown
         a(href="") Автотовары
           +icon('arrow-right')

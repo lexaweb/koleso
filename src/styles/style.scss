@@ -1,7 +1,9 @@
 @import 'common/header';
 @import 'common/global';
 @import 'common/footer';
-
+html.active {
+  overflow: hidden;
+}
 body {
   .wrapper {
     .inner {
@@ -1117,7 +1119,31 @@ height: 100%;
         }
       }
       // egg
+      @include media-tablet-horizontal {
+        .calculator {
+          width: 98%;
+          margin: 0 auto;
+          .row-parameters {
+            justify-content: space-between;
+            flex-wrap: wrap;
+          }
+          .row-view {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .thorns {
+              margin: 0;
+              margin-top: 40px;
+          }
+          }
+          .tires {
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+
     }
   }
 }
-/* stylelint-disable */
+
