@@ -389,3 +389,9 @@ $(document).ready(function(){
 });
 });
 
+$(document).ready(function(){
+  $(".active-tires").click(function(){
+    $(this).toggleClass("active");
+    $('.tires').toggleClass("active");
+  });
+});

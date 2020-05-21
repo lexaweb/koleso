@@ -204,6 +204,113 @@ block content
                     .select__item Модификация 4
             .row-select
               button(type="submit") ПОДОБРАТЬ ПО АВТО
+      .calculator-mobile
+        .row-calculator-mobile-tires
+          .active-tires
+            p подобрать 
+            p шины
+            +icon('arrow-bottom')
+          form.tires(action="action.php", method="post")
+            .row-parameters
+              .block-product
+                label Ширина
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current 205
+                    .select-arrow-button
+                  .select__body
+                    .select__item 205
+                    .select__item 210
+                    .select__item 215
+              span.dash /
+              .block-product
+                label Высота
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current 55
+                    .select-arrow-button
+                  .select__body
+                    .select__item 55
+                    .select__item 65
+                    .select__item 75
+              .block-product
+                label Диаметр
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current R 15
+                    .select-arrow-button
+                  .select__body
+                    .select__item R 15
+                    .select__item R 16
+                    .select__item R 17
+              .block-product
+                label Производитель
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current Производитель 1
+                    .select-arrow-button
+                  .select__body
+                    .select__item Производитель 1
+                    .select__item Производитель 2
+                    .select__item Производитель 3
+            .row-view
+              .season
+                .block-view
+                  input#check21(type="radio", name="checkbox1") 
+                  label(for="check21") Все 
+                .block-view
+                  input#check22(type="radio", name="checkbox1")
+                  label(for="check22") Зима
+                .block-view
+                  input#check23(type="radio", name="checkbox1")
+                  label(for="check23") Лето 
+                .block-view
+                  input#check24(type="radio", name="checkbox1")
+                  label(for="check24") Всесезонные 
+              .thorns
+                .block-view
+                  input#check25(type="radio", name="checkbox2")
+                  label(for="check25") Без шипов
+                .block-view
+                  input#check26(type="radio", name="checkbox2")
+                  label(for="check26") Шипованные 
+                .block-view
+                  input#check27(type="radio", name="checkbox2")
+                  label(for="check27") Не важно
+            .row-lifetime 
+              .block-lifetime 
+                input#check28(type="checkbox") 
+                label.check(for="check28")
+                label.text(for="check28") RunFlat
+                  span.question.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+              .block-lifetime 
+                input#check29(type="checkbox") 
+                label.check(for="check29")
+                label.text(for="check29") Коммерческие
+              .block-lifetime 
+                input#check210(type="checkbox")
+                label.check(for="check210")
+                label.text(for="check210") Распродажа
+            .row-select
+              button(type="submit") ПОДОБРАТЬ ШИНЫ
+        .row-calculator-mobile-wheels
+          .active-wheels
+            p подобрать 
+            p диски
+              +icon('arrow-bottom')
+        .row-calculator-mobile-by-car
+          .active-by-car
+            p подобрать 
+            p по авто
+              +icon('arrow-bottom')
+        .row-calculator-mobile-service
+          .tire-service
+            p Записаться 
+            p на шиномонтаж
       .stocks
         .row-stocks-1
           .block-stocks
