@@ -301,16 +301,124 @@ block content
           .active-wheels
             p подобрать 
             p диски
-              +icon('arrow-bottom')
+            +icon('arrow-bottom')
+          form.wheels(action="action.php", method="post")
+            .row-parameters
+              .block-product
+                label Диаметр
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current Все
+                    .select-arrow-button
+                  .select__body
+                    .select__item Все
+                    .select__item 13
+                    .select__item 14
+              span.dash 
+              .block-product
+                label PCD
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current Все
+                    .select-arrow-button
+                  .select__body
+                    .select__item Все
+                    .select__item 3*112
+                    .select__item 4*98
+              .block-product
+                label Тип
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current Все
+                    .select-arrow-button
+                  .select__body
+                    .select__item Все
+                    .select__item Литые
+                    .select__item Штампованные
+                    .select__item Кованные
+              .block-product
+                label Производитель
+                  span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                .select
+                  .select__header
+                    span.select__current Все
+                    .select-arrow-button
+                  .select__body
+                    .select__item Все
+                    .select__item Производитель 1
+                    .select__item Производитель 2
+                    .select__item Производитель 3
+            .row-lifetime 
+              .block-lifetime 
+                input#check31(type="checkbox") 
+                label.check(for="check31")
+                label.text(for="check31") Распродажа
+              .block-lifetime 
+                input#check32(type="checkbox")
+                label.check(for="check32")
+                label.text(for="check32") 4 и более
+            .row-select
+              button(type="submit") ПОДОБРАТЬ ДИСКИ
         .row-calculator-mobile-by-car
           .active-by-car
             p подобрать 
             p по авто
-              +icon('arrow-bottom')
+            +icon('arrow-bottom')
+          form.by-car(action="action.php", method="post")
+            .row-parameters
+              .block-product
+                label марка
+                .select
+                  .select__header
+                    span.select__current 1 марка
+                    .select-arrow-button
+                  .select__body
+                    .select__item 2 марка
+                    .select__item 3 марка
+                    .select__item 4 марка
+              span.dash 
+              .block-product
+                label Модель
+                .select
+                  .select__header
+                    span.select__current модель 1
+                    .select-arrow-button
+                  .select__body
+                    .select__item модель 1
+                    .select__item модель 2
+                    .select__item модель 3
+              .block-product
+                label Год выпуска
+                .select
+                  .select__header
+                    span.select__current 2000
+                    .select-arrow-button
+                  .select__body
+                    .select__item 2000
+                    .select__item 2001
+                    .select__item 2002
+                    .select__item 2003
+              .block-product
+                label Модификация
+                .select
+                  .select__header
+                    span.select__current Модификация 1
+                    .select-arrow-button
+                  .select__body
+                    .select__item Модификация 1
+                    .select__item Модификация 2
+                    .select__item Модификация 3
+                    .select__item Модификация 4
+            .row-select
+              button(type="submit") ПОДОБРАТЬ ПО АВТО
         .row-calculator-mobile-service
           .tire-service
-            p Записаться 
-            p на шиномонтаж
+            a(href="")
+              p Записаться 
+              p на шиномонтаж
       .stocks
         .row-stocks-1
           .block-stocks
@@ -352,6 +460,9 @@ block content
             a(href="")
             p автосервис
       .map
+        .row-map
+          h1 Наши центры
+          .click показать списком
         .list
           h1 Наши центры
           .list-link-map.scroll-pane

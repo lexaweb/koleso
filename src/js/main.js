@@ -394,4 +394,18 @@ $(document).ready(function(){
     $(this).toggleClass("active");
     $('.tires').toggleClass("active");
   });
+  $(".active-wheels").click(function(){
+    $(this).toggleClass("active");
+    $('.wheels').toggleClass("active");
+  });
+  $(".active-by-car").click(function(){
+    $(this).toggleClass("active");
+    $('.by-car').toggleClass("active");
+  });
+});
+
+$(document).ready(function(){
+  $('.click').on("click", function(){ 
+    $('.list').fadeToggle();
+  });
 });

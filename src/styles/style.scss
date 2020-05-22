@@ -558,6 +558,7 @@ body {
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            flex-wrap: wrap;
             p {
               font: 700 20px/22px $font;
               color: #222;
@@ -645,6 +646,32 @@ body {
         align-items: center;
         border: 1px solid #e6e8e0;
         margin-bottom: 60px;
+        .row-map {
+          display: none;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+          h1 {
+            font: 700 16px/22px $font;
+            color: #222;
+          }
+          .click {
+            position: relative;
+            font: 400 13px/22px $font;
+            color: #555;
+            cursor: pointer;
+            &::before {
+              content: '';
+              position: absolute;
+              border-top: 1px dotted #555;
+              width: 100%;
+              height: 2px;
+              bottom: 0;
+              left: 0;
+            }
+          }
+        }
         .list {
           padding: 25px 17px 30px 30px;
           height: 380px;
@@ -1433,22 +1460,23 @@ height: 100%;
           margin: 10px 0;
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
           border-radius: 10px;
-          padding: 18px 20px;
-          cursor: pointer;
           .tire-service {
             position: relative;
-            font: 700 14px/22px $font;
-            color:#e22f22;
             &::before {
               content: '';
               position: absolute;
               background: url('../img/tire-service.png') no-repeat;
               background-size: contain;
-              bottom: -18px;
-              right: -20px;
+              bottom: 0;
+              right: 0;
               width: 108px;
               height: 78px;
               border-radius: 0 10px 10px 0;
+          }
+          a {
+            padding: 18px 20px;
+            font: 700 14px/22px $font;
+            color:#e22f22;
           }
           }
         }
@@ -1475,6 +1503,34 @@ height: 100%;
               display: none;
             }
           }
+        }
+        .stocks {
+          width: 98%;
+          margin: 0 auto;
+          .row-stocks-2 {
+            flex-wrap: wrap;
+            .block-stocks-two {
+              margin: 15px 0;
+            }
+          }
+        }
+        .catalog {
+          width: 98%;
+          margin: 40px auto;
+          .block-catalog {
+            &-1,
+            &-2,
+            &-3,
+            &-4,
+            &-5 {
+              margin: 10px;
+            }
+
+          }
+        }
+        .egg {
+          width: 98%;
+          margin: 40px auto;
         }
       }
       @include media-tablet {
@@ -1520,6 +1576,7 @@ height: 100%;
                 .tires {
                   .row-parameters {
                     justify-content: space-between;
+                    border-top: 1px solid #e5e5e5;
                     .block-product {
                       margin-right: 0;
                       &:nth-child(5) {
@@ -1573,14 +1630,274 @@ height: 100%;
                   }
                 }
               }
+              &-wheels {
+                .wheels {
+                  opacity: 0;
+                  transition: 0.3s;
+                  visibility: hidden;
+                  height: 0;
+                }
+                .wheels.active {
+                  opacity: 1;
+                  visibility: visible;
+                  height: auto;
+                  padding: 0 10px 20px;
+                }
+                .active-wheels.active {
+                  transition: 0.3s;
+                  &::before {
+                    display: none;
+                  }
+                  p {
+                    display: inline-block;
+                  }
+                  .icon-arrow-bottom {
+                    float: right;
+                    margin-top: 8px;
+                    transform: rotate(180deg);
+                  }
+                }
+                  .wheels {
+                    .row-parameters {
+                      justify-content: space-between;
+                      border-top: 1px solid #e5e5e5;
+                      .block-product {
+                        margin-right: 0;
+                        &:nth-child(5) {
+                          width: 100%;
+                        }
+                      }
+                      .dash {
+                        margin: 0;
+                        margin-bottom: 10px;
+                      }
+                      .block-product {
+                        label {
+                          margin: 12px 0;
+                        }
+                      }
+                    }
+                    .row-view {
+                      justify-content: center;
+                      margin: 20px 0;
+                      .season, .thorns {
+                        .block-view {
+                          label {
+                            padding: 6px 8px;
+                          }
+                        }
+                      }
+                      .thorns {
+                        margin-top: 20px;
+                      }
+        
+                    }
+                    .row-lifetime {
+                      justify-content: flex-start;
+                      margin-top: 20px;
+                      flex-wrap: wrap;
+                      .block-lifetime {
+                        justify-content: flex-start;
+                        margin: 0;
+                        margin-top: 15px;
+                        width: 100%;
+                      }
+                    }
+                    .row-select {
+                      text-align: center;
+                      button {
+                        margin-top: 20px;
+                      }
+                    }
+                  }
+                }
+                &-by-car {
+                  .by-car {
+                    opacity: 0;
+                    transition: 0.3s;
+                    visibility: hidden;
+                    height: 0;
+                  }
+                  .by-car.active {
+                    opacity: 1;
+                    visibility: visible;
+                    height: auto;
+                    padding: 0 10px 20px;
+                  }
+                  .active-by-car.active {
+                    transition: 0.3s;
+                    &::before {
+                      display: none;
+                    }
+                    p {
+                      display: inline-block;
+                    }
+                    .icon-arrow-bottom {
+                      float: right;
+                      margin-top: 8px;
+                      transform: rotate(180deg);
+                    }
+                  }
+                    .by-car {
+                      .row-parameters {
+                        justify-content: space-between;
+                        border-top: 1px solid #e5e5e5;
+                        .block-product {
+                          margin-right: 0;
+                          &:nth-child(5) {
+                            width: 100%;
+                          }
+                        }
+                        .dash {
+                          margin: 0;
+                          margin-bottom: 10px;
+                        }
+                        .block-product {
+                          label {
+                            margin: 12px 0;
+                          }
+                        }
+                      }
+                      .row-view {
+                        justify-content: center;
+                        margin: 20px 0;
+                        .season, .thorns {
+                          .block-view {
+                            label {
+                              padding: 6px 8px;
+                            }
+                          }
+                        }
+                        .thorns {
+                          margin-top: 20px;
+                        }
+          
+                      }
+                      .row-lifetime {
+                        justify-content: flex-start;
+                        margin-top: 20px;
+                        flex-wrap: wrap;
+                        .block-lifetime {
+                          justify-content: flex-start;
+                          margin: 0;
+                          margin-top: 15px;
+                          width: 100%;
+                        }
+                      }
+                      .row-select {
+                        text-align: center;
+                        button {
+                          margin-top: 20px;
+                        }
+                      }
+                    }
+                  }
             }
               
           }
 
         }
-      }
+        .stocks {
+          .row-stocks-1  {
+            .block-stocks {
+              p {
+                &:nth-child(1) {
+                  font: 700 16px/22px $font;
+                }
+              }
+            }
+          }
+          .row-stocks-2 {
+            justify-content: center;
+            .block-stocks-img-1 {
+              margin: 15px 0;
+            }
+            .block-stocks-two {
+              margin: 0;
+            }
+          }
+        }
+        .catalog {
+          margin-top: 40px;
+          .row-catalog-1 {
+            margin-bottom: 5px;
+            p {
+              font: 700 16px/22px $font;
+            }
+          }
+          .block-catalog {
+            &-1,
+            &-2,
+            &-3,
+            &-4,
+            &-5 {
+              margin: 5px 0;
+              width: 100%;
+              height: 50px;
+              p {
+                font: 400 16px/24px $font;
+                margin: auto 25px;
+                display: inline-flex;
+                align-items: center;
+                height: 100%;
+                text-transform: none;
+              }
+              &::after {
+                height: 50px;
+                right: 20px;
+              }
+            }
 
+          }
+        }
+        .map {
+          width: 98%;
+          margin: 0 auto 40px auto;
+          border: none;
+          justify-content: center;
+          flex-wrap: wrap;
+          .row-map {
+            display: flex;
+          }
+          .list {
+            display: none;
+            h1 {
+              display: none;
+            }
+          }
+          .map-widget {
+            width: 100%;
+          }
+        }
+      }
+      @include media-mobile {
+        .stocks {
+          .row-stocks-2 {
+            justify-content: center;
+            .block-stocks-img-1 {
+              width: 270px;
+              height: 200px;
+              margin: 15px 0;
+              .red {
+                font: 700 19px/30px $font;
+                padding: 13px 5px;
+              }
+            }
+            .block-stocks-img-2 {
+              width: 270px;
+              height: 288px;
+              margin: 0;
+            }
+
+            .block-stocks-two {
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              margin: 15px 0;
+            }
+      }
+    }
+  }
     }
   }
 }
-
