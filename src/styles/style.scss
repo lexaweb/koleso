@@ -1,6 +1,9 @@
 @import 'common/header';
 @import 'common/global';
 @import 'common/footer';
+html {
+  overflow-x: hidden;
+}
 html.active {
   overflow: hidden;
 }
@@ -415,7 +418,6 @@ body {
             width: 490px;
             height: 360px;
             background: url('../img/block-stocks-img-1.png') no-repeat;
-            background-size: contain;
             padding-top: 60px;
             transition: 0.3s;
             &:hover {
@@ -826,6 +828,7 @@ height: 100%;
       // product-list
       .product-list {
         margin-bottom: 60px;
+        overflow-y: hidden;
         h1 {
           font: 700 20px/22px $font;
           color: #222;
@@ -876,10 +879,12 @@ height: 100%;
             justify-content: space-between;
             margin-top: 30px;
             height: 390px;
+            width: 1140px;
             .block-product-list {
               position: relative;
               border: 1px solid #e5e5e5;
               padding: 12px 20px 20px 20px;
+              min-width: 217px;
               .icon-present {
                 width: 30px;
                 height: 30px;
@@ -1049,6 +1054,7 @@ height: 100%;
       // product-list
       // video
       .video {
+        overflow-y: hidden;
         .row-video {
           &-1 {
             display: flex;
@@ -1085,7 +1091,9 @@ height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            width: 1140px;
             .block-video-img {
+              width: 220px;
               a {
                 &:hover {
                   opacity: 0.7;
@@ -1336,7 +1344,6 @@ height: 100%;
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          margin: 35px 0;
           .season,
           .thorns {
             display: flex;
@@ -1344,6 +1351,7 @@ height: 100%;
             align-items: center;
             border-radius: 5px;
             border: 1px solid #e5e5e5;
+            margin: 35px 0;
             .block-view {
               border-right: 1px solid #e5e5e5;
               background: #f9f9fa;
@@ -1508,7 +1516,11 @@ height: 100%;
           width: 98%;
           margin: 0 auto;
           .row-stocks-2 {
+            justify-content: center;
             flex-wrap: wrap;
+            .block-stocks-img-1 {
+              margin-bottom: 15px;
+            }
             .block-stocks-two {
               margin: 15px 0;
             }
@@ -1532,6 +1544,43 @@ height: 100%;
           width: 98%;
           margin: 40px auto;
         }
+        .product-list {
+          width: 98%;
+          margin: 0 auto;
+          margin-bottom: 40px;
+          h1 {
+            font: 700 16px/22px $font;
+          }
+          .row-product-list {
+            &-1 {
+              .block-product-list {
+                span {
+                  font: 400 14px/22px $font;
+                  margin-right: 10px;
+                }
+              }
+            }
+            &-2 {
+              justify-content: flex-start;
+              .block-product-list {
+                margin: 0 5px;
+                &:nth-child(1) {
+                  margin-left: 0;
+                }
+                &:nth-child(5) {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+        .video {
+          width: 98%;
+          margin: 0 auto;
+          h1 {
+            font: 700 16px/22px $font;
+          }
+        }
       }
       @include media-tablet {
         .calculator {
@@ -1547,16 +1596,10 @@ height: 100%;
             .row-calculator-mobile {
               &-tires {
               .tires {
-                opacity: 0;
+                display: none;
                 transition: 0.3s;
-                visibility: hidden;
-                height: 0;
-              }
-              .tires.active {
-                opacity: 1;
-                visibility: visible;
-                height: auto;
                 padding: 0 10px 20px;
+
               }
               .active-tires.active {
                 transition: 0.3s;
@@ -1597,9 +1640,9 @@ height: 100%;
                     }
                   }
                   .row-view {
-                    justify-content: center;
-                    margin: 20px 0;
+                    justify-content: space-between;
                     .season, .thorns {
+                      margin: 20px 0;
                       .block-view {
                         label {
                           padding: 6px 8px;
@@ -1632,16 +1675,9 @@ height: 100%;
               }
               &-wheels {
                 .wheels {
-                  opacity: 0;
-                  transition: 0.3s;
-                  visibility: hidden;
-                  height: 0;
-                }
-                .wheels.active {
-                  opacity: 1;
-                  visibility: visible;
-                  height: auto;
                   padding: 0 10px 20px;
+                  transition: 0.3s;
+                  display: none;
                 }
                 .active-wheels.active {
                   transition: 0.3s;
@@ -1713,16 +1749,9 @@ height: 100%;
                 }
                 &-by-car {
                   .by-car {
-                    opacity: 0;
                     transition: 0.3s;
-                    visibility: hidden;
-                    height: 0;
-                  }
-                  .by-car.active {
-                    opacity: 1;
-                    visibility: visible;
-                    height: auto;
                     padding: 0 10px 20px;
+                    display: none;
                   }
                   .active-by-car.active {
                     transition: 0.3s;
@@ -1895,6 +1924,15 @@ height: 100%;
               flex-wrap: wrap;
               margin: 15px 0;
             }
+      }
+    }
+    .calculator-mobile  {
+      .row-calculator-mobile-tires {
+        .tires {
+          .row-view {
+            justify-content: center;
+          }
+        }
       }
     }
   }

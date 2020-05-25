@@ -239,20 +239,25 @@ $(document).ready(() => {
 });
 
 $(function(){
-  $('.search-h').click(function(){
+  $('.search-h').focus(function(){
       $('.icon-black').addClass('active');
       $('.icon-white').addClass('active');
   });
+
+  $('.search-h').blur(function(){
+    $('.icon-white').removeClass('active');
+    $('.icon-black').removeClass('active');
+});
 });
 
-$(document).click( function(e){
-  if ( $(e.target).closest('.search-h').length ) {
-      return;
-  }
+// $(document).click( function(e){
+//   if ( $(e.target).closest('.search-h').length ) {
+//       return;
+//   }
 
-  $('.icon-white').addClass('active');
-  $('.icon-black').addClass('active');
-});
+//   $('.icon-white').addClass('active');
+//   $('.icon-black').addClass('active');
+// });
 
 (function($) {
   $(function() {
@@ -392,15 +397,15 @@ $(document).ready(function(){
 $(document).ready(function(){
   $(".active-tires").click(function(){
     $(this).toggleClass("active");
-    $('.tires').toggleClass("active");
+    $('.tires').slideToggle();
   });
   $(".active-wheels").click(function(){
     $(this).toggleClass("active");
-    $('.wheels').toggleClass("active");
+    $('.wheels').slideToggle();
   });
   $(".active-by-car").click(function(){
     $(this).toggleClass("active");
-    $('.by-car').toggleClass("active");
+    $('.by-car').slideToggle();
   });
 });
 
