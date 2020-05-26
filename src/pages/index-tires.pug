@@ -1,0 +1,27 @@
+extends common/layout
+block variables
+  -var pageTitle ='Главная'
+block content
+  main
+    .inner 
+      .breadcrumb 
+        a(href="") Главная 
+        p – Шины  
+      form.filter(action="filter.php", method="post")
+        h1 Шины 205/55 R16
+        .block-filter
+          .filter-auto-drop
+            p Фильтр по авто
+            +icon('arrow-bottom')
+          .filter-parameters-drop
+            p Фильтр по параметрам
+            +icon('arrow-bottom')
+          .dropdown-parameters
+            .summ
+              label Цена
+              .block-summ
+                input.number#amount(type="text")
+              span - 
+              .block-summ
+                input.number#amount1(type="text")
+              #slider-range
