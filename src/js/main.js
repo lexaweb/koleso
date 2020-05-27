@@ -442,3 +442,14 @@ $( "#slider-range" ).slider({
 $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ));
 $( "#amount1" ).val($( "#slider-range" ).slider( "values", 1 ) );
 } );
+
+$(document).ready(function(){
+  $(".filter-parameters-drop").click(function(){
+    $(this).toggleClass("active");
+    $('.dropdown-parameters').slideToggle();
+  });
+  $(".filter-auto-drop").click(function(){
+    $(this).toggleClass("active");
+    $('.dropdown-auto').slideToggle();
+  });
+});
