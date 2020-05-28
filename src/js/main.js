@@ -453,3 +453,17 @@ $(document).ready(function(){
     $('.dropdown-auto').slideToggle();
   });
 });
+
+$(document).ready(function() {
+  $('[name=quantity]').bind("change keyup input click", function() {
+  if (this.value.match(/[^0-9]/g)) {
+  this.value = this.value.replace(/[^0-9]/g, '');
+  }
+  });
+  });
+
+  $(document).ready(function(){
+    $(".hidden").click(function(){
+      $('.regulation').slideToggle();
+    });
+  });

@@ -1,0 +1,53 @@
+extends common/layout
+block variables
+  -var pageTitle ='zapis-1'
+block content
+  main
+    .inner 
+      .breadcrumb 
+        a(href="") Главная 
+        a(href="") – Запись на услуги 
+        p – Запись на услугу "Легковой шиномонтаж"
+      h1 Запись на услугу "Легковой шиномонтаж"
+      .record
+        .col-1
+          form.shipment(action="action.php", method="post")
+            .row-status
+              p Укажите статус клиента
+              .block-status 
+                input#check1(type="radio", name="checkbox2") 
+                label.check(for="check1")
+                label.text(for="check1") Частное лицо
+              .block-status 
+                input#check2(type="radio", name="checkbox2")
+                label.check(for="check2")
+                label.text(for="check2") Корпоративный клиент
+              .block-number
+                p Гос. номер вашей машины *
+                input(type="text", name="quantity")
+            .row-storage
+              p Ваши шины на сезонном хранении в компании КОЛЕСО?
+              .block-storage 
+                input#check3(type="radio", name="checkbox2") 
+                label.check(for="check3")
+                label.text(for="check3") Нет. Я привезу свои шины или планирую купить шины в вашем магазине
+              .block-storage 
+                input#check4(type="radio", name="checkbox2")
+                label.check(for="check4")
+                label.text(for="check4") Да. Мои шины находятся на сезонном хранении
+              .block-number
+                p Номер партии хранения
+                  span.question.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                input(type="text", placeholder="123456", name="quantity")
+            .row-forth
+              button(type="submit") ДАЛЕЕ
+        .col-2 
+          p.hidden Правила записи
+          .regulation
+              h1 Правила записи на услугу Легковой шиномонтаж:
+              ol
+                li Запись производится на ближайшие 14 дней, с 10:00 до 20:00.
+                li Просьба внимательно заполнять личные данные! В случае неподтверждения заявки администрация ТСЦ оставляет за собой право аннулировать Ваш заказ.
+                li В случае опоздания обслуживание будет проводиться в порядке общей очереди.
+                li В сервисной зоне в указанное время обслуживается ТОЛЬКО зарегистрированный в заявке автомобиль.
+                li Если у Вас имеются шины, сданные на сезонное хранение, записывайтесь на шиномонтаж заранее, не менее чем за 5 дней, и укажите в заявке номер партии в договоре сезонного хранения.
