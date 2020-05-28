@@ -1,0 +1,290 @@
+extends common/layout
+block variables
+  -var pageTitle ='actions-card'
+block content
+  main
+    .inner 
+      .breadcrumb 
+        a(href="") Главная 
+        a(href="") – Акции 
+        p – Черная пятница в сети шинных центров КОЛЕСО
+      p.head Черная пятница в сети шинных центров КОЛЕСО
+      .actions-card
+        .row-actions-card-1
+          .poster
+            a(href="")
+              img(src="img/actions-card-poster.png", alt="")
+        .row-actions-card-2
+          .text
+            h2 Чёрные не только ШИНЫ! Встречай чёрную пятницу в КОЛЕСО! Только до Пятницы 13-го!
+            p Успей купить шины и сопутствующие товары по Акции «Черная пятница» со скидкой до 50%. В акции принимают участие товары, отмеченные значком «Черная пятница». Акция действует до 13 декабря 2019г.
+            p Количество товаров ограничено. Возможно досрочное прекращение акции при продаже всех товаров по указанным ценам.
+        .row-actions-card-3
+          h2 Товары по акции
+          p 
+           a(href="") показать все
+        form.product-list(action="product.php", method="post")
+          .row-product-list-2
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27 
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт. 
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart')
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27 
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт. 
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27 
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт. 
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27 
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт. 
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27 
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт. 
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27 
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт. 
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27 
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт. 
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27 
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт. 
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27 
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт. 
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27 
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт. 
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+        .row-actions-card-5
+          a(href="") Показать все шины, участвующие в акции
+          a(href="") Показать все сопутствующие автотовары, участвующие в акции
