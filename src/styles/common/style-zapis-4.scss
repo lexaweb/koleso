@@ -1,0 +1,126 @@
+@import '../mixins/media';
+
+.breadcrumb {
+  font: 400 13px/22px $font;
+  color: #aaa;
+  margin: 25px 0 20px 0;
+  a {
+    display: inline-block;
+    color: #222;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  p {
+    display: inline-block;
+  }
+  @include media-tablet {
+    width: 98%;
+    margin: 25px auto 20px auto;
+}
+@include media-mobile {
+  width: 98%;
+  margin: 25px auto 20px auto;
+}
+}
+.zapis {
+  font: 400 29px/33px $font;
+  color: #222;
+  margin-bottom: 40px;
+  @include media-laptop {
+    width: 90%;
+    margin: 0 auto 40px auto;
+  }
+  @include media-tablet-horizontal {
+    width: 90%;
+    margin: 0 auto 40px auto;
+  }
+  @include media-tablet {
+    font: 400 18px/23px $font;
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto 20px auto;
+  }
+}
+.address {
+  font: 400 13px/22px $font;
+  color: #222;
+  margin-bottom: 15px;
+  @include media-laptop {
+    width: 90%;
+    margin: 0 auto 15px auto;
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto 15px auto;
+  }
+  strong {
+    font: 700 15px/23px $font;
+    margin-bottom: 5px;
+  }
+}
+.date {
+  font: 400 13px/22px $font;
+  color: #222;
+  margin-bottom: 40px;
+  @include media-laptop {
+    width: 90%;
+    margin: 0 auto 40px auto;
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto 40px auto;
+  }
+  strong {
+    font: 700 13px/22px $font;
+    display: block;
+  }
+  p {
+    display: inline-block;
+    font: 400 13px/22px $font;
+  }
+}
+.appeal {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  background: #f9f9fa;
+  margin-bottom: 60px;
+  padding: 30px;
+  @include media-laptop {
+    width: 90%;
+    margin: 0 auto 60px auto;
+  }
+  @include media-tablet-horizontal {
+  grid-template-columns: 1fr 6fr;
+  }
+  @include media-tablet-horizontal {
+  grid-template-columns: 1fr 4fr;
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto 40px auto;
+    padding: 10px;
+  }
+  .attention {
+    @include media-tablet {
+      margin-right: 10px;
+    }
+    .icon-attention {
+      width: 58px;
+      height: 58px;
+    }
+  }
+  .text {
+    color: #222;
+    h1 {
+      font: 700 15px/23px $font;
+      margin-bottom: 15px;
+    }
+    p {
+      font: 400 13px/22px $font;
+      margin-bottom: 15px;
+    }
+  }
+}
