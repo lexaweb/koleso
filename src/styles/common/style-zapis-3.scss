@@ -1,0 +1,148 @@
+@import '../mixins/media';
+
+.breadcrumb {
+  font: 400 13px/22px $font;
+  color: #aaa;
+  margin: 25px 0 20px 0;
+  a {
+    display: inline-block;
+    color: #222;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  p {
+    display: inline-block;
+  }
+  @include media-tablet {
+    width: 98%;
+    margin: 25px auto 20px auto;
+}
+@include media-mobile {
+  width: 98%;
+  margin: 25px auto 20px auto;
+}
+}
+.zapis {
+  font: 400 29px/33px $font;
+  color: #222;
+  margin-bottom: 40px;
+  @include media-laptop {
+    width: 90%;
+    margin: 0 auto 40px auto;
+  }
+  @include media-tablet-horizontal {
+    width: 90%;
+    margin: 0 auto 40px auto;
+  }
+  @include media-tablet {
+    font: 400 18px/23px $font;
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto 20px auto;
+  }
+}
+.contact-data {
+  @include media-laptop {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto;
+  }
+  h1 {
+    font: 700 15px/23px $font;
+    color: #222;
+    width: 100%;
+    margin: 0;
+  }
+  .block-contact-data-input {
+    label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 12px;
+      font: 400 13px/22px $font;
+      color: #555;
+    }
+    input {
+      width: 400px;
+      height: 45px;
+      border: 1px solid #E5E5E5;
+      border-radius: 5px;
+      padding: 0 20px;
+      font: 400 15px/23px $font;
+      @include media-tablet {
+        width: 300px;
+      }
+      @include media-mobile {
+        width: 100%;
+      }
+    }
+  }
+  .calculator {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    @include media-tablet {
+      display: block;
+    }
+    .row-parameters {
+      display: inline-block;
+    }
+    .tires {
+      &:before {
+        display: none;
+      }
+      .block-product {
+        width: 210px;
+        .select__body {
+          z-index: 2;
+        }
+      }
+      .row-lifetime {
+        display: block;
+        .block-lifetime {
+          justify-content: flex-start;
+          margin-bottom: 15px;
+          .check {
+            min-width: 20px;
+          }
+          label {
+            p {
+              display: inline-block;
+              color: #e22f22;
+            }
+          }
+        }
+      }
+      .row-select {
+        margin-bottom: 60px;
+        @include media-mobile {
+          text-align: center;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          margin-top: 20px;
+          font: 400 13px/22px $font;
+          color: #aaa;
+          transform: 0.3s;
+          @include media-mobile {
+            justify-content: center;
+          }
+          &:hover {
+            opacity: 0.7;
+          }
+          svg {
+            width: 7px;
+            height: 13px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

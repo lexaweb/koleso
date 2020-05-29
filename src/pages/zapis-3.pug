@@ -1,0 +1,60 @@
+extends common/layout
+block variables
+  -var pageTitle ='zapis-3'
+block content
+  main
+    .inner 
+      .breadcrumb 
+        a(href="") Главная 
+        a(href="") – Запись на услуги 
+        p – Запись на услугу "Легковой шиномонтаж"
+      h2.zapis Запись на услугу "Легковой шиномонтаж"
+      form.contact-data(action="action.php", method="post")
+        h1 Контактные данные
+        .block-contact-data-input
+          label ФИО / Компания *
+          input(type="text", name="text")
+        .block-contact-data-input
+          label Контактный телефон *
+          input(type="text", name="text")
+        .block-contact-data-input
+          label Электронная почта
+          input(type="text", name="text")
+        .calculator
+          .tires
+            .row-parameters
+              .block-product
+                label Марка автомобиля *
+                .select
+                  .select__header
+                    span.select__current -
+                    .select-arrow-button
+                  .select__body
+                    .select__item марка 1
+                    .select__item марка 2
+                    .select__item марка 3
+              .block-product
+                label Модель автомобиля
+                .select
+                  .select__header
+                    span.select__current -
+                    .select-arrow-button
+                  .select__body
+                    .select__item модель 1
+                    .select__item модель 2
+                    .select__item модель 3
+            .row-lifetime 
+              .block-lifetime 
+                input#check31(type="checkbox") 
+                label.check(for="check31")
+                label.text(for="check31") С правилами предварительной записи на услугу Легковой шиномонтаж ознакомлен, согласен
+              .block-lifetime 
+                input#check32(type="checkbox")
+                label.check(for="check32")
+                label.text(for="check32") Я согласен на 
+                  p обработку персональных данных.
+            .row-select
+              button(type="submit") ЗАПИСАТЬСЯ
+              a(href="")
+                +icon('arrow-left-zapis') 
+                | НАЗАД
