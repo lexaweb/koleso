@@ -1,0 +1,332 @@
+extends common/layout
+block variables
+  -var pageTitle ='card-tires-1'
+block content
+  main
+    .inner 
+      .breadcrumb 
+        a(href="") Главная 
+        a(href="") – Запись на услуги 
+        p – Запись на услугу "Легковой шиномонтаж"
+      .head-card 
+        h1 Шины Kumho I`Zen KW31 185/65 R14 86R
+        p Артикул: 2128683
+      .section-product
+        .row-product-slider
+          .block-product-main
+            .block-product-slider.swiper-container
+              .slider_item.swiper-wrapper
+                .swiper-slide
+                  img(src="img/block-product-slider.png", alt="")
+                  .icon-center
+                    a(href="img/block-product-slider.png", rel="nofollow", target="_blank")
+                      +icon('zoom-in_icon')
+                .swiper-slide
+                  img(src="img/block-product-slider.png", alt="")
+                  .icon-center
+                    a(href="img/block-product-slider.png", rel="nofollow", target="_blank")
+                      +icon('zoom-in_icon')
+              .block-product-slider-icon
+                .icon-top
+                  .icon
+                    a(href="")
+                      +icon('present')
+                  .icon
+                    a(href="")
+                      +icon('like')
+                    a(href="")  
+                      +icon('chart')  
+                .icon-bottom
+                  a(href="")
+                    +icon('winter')
+                .hover-slider
+                  .icon-left.swiper-button-prev(role="button")
+                    +icon('arrow_left')
+                  .icon-right.swiper-button-next(role="button")
+                    +icon('arrow_right')
+            .row-product-slider-mini.swiper-container-thumbs
+              .swiper-wrapper
+                .block-product-slider-mini.swiper-slide
+                  img(src="img/block-product-slider.png", alt="")
+                .block-product-slider-mini.swiper-slide
+                  img(src="img/block-product-slider.png", alt="")
+          .block-product-form
+            form(action="action.php", method="post")
+              .row-form-1
+                p 2 720 ₽ 
+                  span /шт
+                .logo-corp  
+                  +icon('kumho-logo')
+              .row-form-2
+                 .number-hover
+                  span.green
+                  span.green
+                  span.green
+                  span.grey
+                  p.text 27 шт.
+              .row-form-3
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .summ 10 880 ₽
+              .row-form-4
+                .add-cart
+                  button(type="submit") Добавить в корзину
+                .click
+                  a(href="") Купить в 1 клик
+              .row-form-5
+                .inf 
+                  h1 При покупке этого товара Вы получите:
+                  .text 
+                    +icon('check-red')
+                    span Расширенная гарантия 
+                    p КОЛЕСО
+                  .text 
+                    +icon('check-red')
+                    span Бесплатный шиномонтаж 
+                    p зимних шин Kumho
+      .section-inf-product.tabs 
+        .row-inf-product.tabs__caption
+          span.active Характеристики
+          span Описание
+          span Наличие
+          span Подходит к авто
+          span Как купить
+        .row-inf-product.tabs__content.active
+          ul
+            li 
+              span.key Ширина
+              span.value 185
+            li 
+              span.key Высота
+              span.value 65
+            li 
+              span.key Диаметр
+              span.value 14
+            li 
+              span.key Сезонность
+              span.value Зимние
+            li 
+              span.key Шипы
+              span.value Нешипованные
+            li 
+              span.key Индекс нагрузки
+              span.value 86
+            li 
+              span.key Индекс скорости
+              span.value R
+            li 
+              span.key Код производителя
+              span.value 2128683
+            li 
+              span.key Код продавца
+              span.value 85756836417
+        .row-inf-product.tabs__content
+          p Преимущества Viatti Strada Asimmetrico: Для повышения сцепных свойств шины при движении в повороте рисунок протектора выполнен асимметричным. Для высокой курсовой устойчивости и интенсивного отвода воды имеется три широких продольных канавки, самая широкая из которых расположена с внешней стороны шины. С обеих сторон этой канавки для повышения поперечной жесткости имеются участки из сплошного массива резины. Центральная и внутренняя зоны рисунка предназначены для передачи тяговых усилий. Для снижения акустического эффекта в окружных канавках по окружности расположены небольшие выступы. Два ребра с внутренней стороны шины имеют узкие поперечные канавки, в которых для повышения эластичности предусмотрены ножевые прорези. Использование разных резиносмесей в плечевой и боковой частях протектора улучшает сцепные свойства и скоростное прохождение поворотов.
+        .row-inf-product.tabs__content
+          p Преимущества Viatti Strada Asimmetrico: Для повышения сцепных свойств шины при движении в повороте рисунок протектора выполнен асимметричным. Для высокой курсовой устойчивости и интенсивного отвода воды имеется три широких продольных канавки, самая широкая из которых расположена с внешней стороны шины. С обеих сторон этой канавки для повышения поперечной жесткости имеются участки из сплошного массива резины. Центральная и внутренняя зоны рисунка предназначены для передачи тяговых усилий. Для снижения акустического эффекта в окружных канавках по окружности расположены небольшие выступы. Два ребра с внутренней стороны шины имеют узкие поперечные канавки, в которых для повышения эластичности предусмотрены ножевые прорези. Использование разных резиносмесей в плечевой и боковой частях протектора улучшает сцепные свойства и скоростное прохождение поворотов.
+        .row-inf-product.tabs__content
+          p Преимущества Viatti Strada Asimmetrico: Для повышения сцепных свойств шины при движении в повороте рисунок протектора выполнен асимметричным. Для высокой курсовой устойчивости и интенсивного отвода воды имеется три широких продольных канавки, самая широкая из которых расположена с внешней стороны шины. С обеих сторон этой канавки для повышения поперечной жесткости имеются участки из сплошного массива резины. Центральная и внутренняя зоны рисунка предназначены для передачи тяговых усилий. Для снижения акустического эффекта в окружных канавках по окружности расположены небольшие выступы. Два ребра с внутренней стороны шины имеют узкие поперечные канавки, в которых для повышения эластичности предусмотрены ножевые прорези. Использование разных резиносмесей в плечевой и боковой частях протектора улучшает сцепные свойства и скоростное прохождение поворотов.
+        .row-inf-product.tabs__content
+          p Преимущества Viatti Strada Asimmetrico: Для повышения сцепных свойств шины при движении в повороте рисунок протектора выполнен асимметричным. Для высокой курсовой устойчивости и интенсивного отвода воды имеется три широких продольных канавки, самая широкая из которых расположена с внешней стороны шины. С обеих сторон этой канавки для повышения поперечной жесткости имеются участки из сплошного массива резины. Центральная и внутренняя зоны рисунка предназначены для передачи тяговых усилий. Для снижения акустического эффекта в окружных канавках по окружности расположены небольшие выступы. Два ребра с внутренней стороны шины имеют узкие поперечные канавки, в которых для повышения эластичности предусмотрены ножевые прорези. Использование разных резиносмесей в плечевой и боковой частях протектора улучшает сцепные свойства и скоростное прохождение поворотов.
+      .section-brand
+        .icon 
+          +icon('kumho-logo')
+        p 
+          a(href="") Все товары бренда
+      .section-inf-product-mobile 
+        .block-inf-product-mobile-specifications
+          p Характеристики
+          .icon
+            +icon('arrow-bottom')
+        .dropdown-specifications
+          ul
+            li 
+              span.key Ширина
+              span.value 185
+            li 
+              span.key Высота
+              span.value 65
+            li 
+              span.key Диаметр
+              span.value 14
+            li 
+              span.key Сезонность
+              span.value Зимние
+            li 
+              span.key Шипы
+              span.value Нешипованные
+            li 
+              span.key Индекс нагрузки
+              span.value 86
+            li 
+              span.key Индекс скорости
+              span.value R
+            li 
+              span.key Код производителя
+              span.value 2128683
+            li 
+              span.key Код продавца
+              span.value 85756836417
+        .block-inf-product-mobile-description
+          p Описание
+          .icon
+            +icon('arrow-bottom')
+        .dropdown-description
+          p Преимущества Viatti Strada Asimmetrico: Для повышения сцепных свойств шины при движении в повороте рисунок протектора выполнен асимметричным. Для высокой курсовой устойчивости и интенсивного отвода воды имеется три широких продольных канавки, самая широкая из которых расположена с внешней стороны шины. С обеих сторон этой канавки для повышения поперечной жесткости имеются участки из сплошного массива резины. Центральная и внутренняя зоны рисунка предназначены для передачи тяговых усилий. Для снижения акустического эффекта в окружных канавках по окружности расположены небольшие выступы. Два ребра с внутренней стороны шины имеют узкие поперечные канавки, в которых для повышения эластичности предусмотрены ножевые прорези. Использование разных резиносмесей в плечевой и боковой частях протектора улучшает сцепные свойства и скоростное прохождение поворотов.
+        .block-inf-product-mobile-existence
+          p Наличие
+          .icon
+            +icon('arrow-bottom')
+        .dropdown-existence
+          p Преимущества Viatti Strada Asimmetrico: Для повышения сцепных свойств шины при движении в повороте рисунок протектора выполнен асимметричным. Для высокой курсовой устойчивости и интенсивного отвода воды имеется три широких продольных канавки, самая широкая из которых расположена с внешней стороны шины. С обеих сторон этой канавки для повышения поперечной жесткости имеются участки из сплошного массива резины. Центральная и внутренняя зоны рисунка предназначены для передачи тяговых усилий. Для снижения акустического эффекта в окружных канавках по окружности расположены небольшие выступы. Два ребра с внутренней стороны шины имеют узкие поперечные канавки, в которых для повышения эластичности предусмотрены ножевые прорези. Использование разных резиносмесей в плечевой и боковой частях протектора улучшает сцепные свойства и скоростное прохождение поворотов.
+        .block-inf-product-mobile-suitable
+          p Подходит к авто
+          .icon
+            +icon('arrow-bottom')
+        .dropdown-suitable
+          p Преимущества Viatti Strada Asimmetrico: Для повышения сцепных свойств шины при движении в повороте рисунок протектора выполнен асимметричным. Для высокой курсовой устойчивости и интенсивного отвода воды имеется три широких продольных канавки, самая широкая из которых расположена с внешней стороны шины. С обеих сторон этой канавки для повышения поперечной жесткости имеются участки из сплошного массива резины. Центральная и внутренняя зоны рисунка предназначены для передачи тяговых усилий. Для снижения акустического эффекта в окружных канавках по окружности расположены небольшие выступы. Два ребра с внутренней стороны шины имеют узкие поперечные канавки, в которых для повышения эластичности предусмотрены ножевые прорези. Использование разных резиносмесей в плечевой и боковой частях протектора улучшает сцепные свойства и скоростное прохождение поворотов.
+        .block-inf-product-mobile-buy
+          p Как купить
+          .icon
+            +icon('arrow-bottom')
+        .dropdown-buy
+          p Преимущества Viatti Strada Asimmetrico: Для повышения сцепных свойств шины при движении в повороте рисунок протектора выполнен асимметричным. Для высокой курсовой устойчивости и интенсивного отвода воды имеется три широких продольных канавки, самая широкая из которых расположена с внешней стороны шины. С обеих сторон этой канавки для повышения поперечной жесткости имеются участки из сплошного массива резины. Центральная и внутренняя зоны рисунка предназначены для передачи тяговых усилий. Для снижения акустического эффекта в окружных канавках по окружности расположены небольшие выступы. Два ребра с внутренней стороны шины имеют узкие поперечные канавки, в которых для повышения эластичности предусмотрены ножевые прорези. Использование разных резиносмесей в плечевой и боковой частях протектора улучшает сцепные свойства и скоростное прохождение поворотов.
+      .actions-card.card-tires
+        .row-actions-card-3
+          h2 Товары по акции
+          p 
+            a(href="") показать все
+        form.product-list(action="product.php", method="post")
+          .row-product-list-2
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт.  
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="card-tires-1.html") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт.  
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="card-tires-1.html") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт.  
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="card-tires-1.html") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт.  
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="card-tires-1.html") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт.  
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              p.worth-hover 9180 ₽
+              a.view-hover(href="card-tires-1.html") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart')         
