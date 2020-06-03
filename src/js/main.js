@@ -16,6 +16,11 @@ $(document).ready(() => {
 
 
   var mySwiper = new Swiper('.swiper-container', {
+    renderFraction: function (currentClass, totalClass) {
+      return '<span class="' + currentClass + '"></span>' +
+              ' of ' +
+              '<span class="' + totalClass + '"></span>';
+  },
     speed: 400,
     spaceBetween: 100,
     pagination: {
@@ -32,6 +37,7 @@ $(document).ready(() => {
         slidesPerView: 5,
       }
     }
+   
   });
 });
 
@@ -275,3 +281,4 @@ $(document).ready(function() {
       $('.dropdown-buy').slideToggle();
     });
   });
+
