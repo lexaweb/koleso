@@ -12,20 +12,21 @@ $(function() {
   });
 
 
-$(document).ready(() => {
 
 
+  var menu = ['1', '2', '3', '4']
   var mySwiper = new Swiper('.swiper-container', {
-    renderFraction: function (currentClass, totalClass) {
-      return '<span class="' + currentClass + '"></span>' +
-              ' of ' +
-              '<span class="' + totalClass + '"></span>';
-  },
-    speed: 400,
-    spaceBetween: 100,
+    
+
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 0,
     pagination: {
       el: '.swiper-pagination',
-      type: 'bullets',
+			clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (menu[index]) + '</span>';
+        },
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -38,8 +39,8 @@ $(document).ready(() => {
       }
     }
    
-  });
-});
+  })
+
 
 $(function(){
   $('.search-h').focus(function(){
