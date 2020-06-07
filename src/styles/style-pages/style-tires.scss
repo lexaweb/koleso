@@ -50,6 +50,7 @@ h1 {
   .block-filter {
     width: 250px;
     min-width: 250px;
+<<<<<<< HEAD:src/styles/style-pages/style-tires.scss
     background: #fff;
     padding-bottom: 87px;
     @include media-tablet {
@@ -156,6 +157,10 @@ h1 {
           }
         }
       }
+=======
+    @include media-tablet {
+      display: none;
+>>>>>>> cb7986ec2107192ae0ec3aeeb447bb84f6ad627b:src/styles/common/style-tires.scss
     }
     .filter-auto-drop {
       display: flex;
@@ -571,10 +576,13 @@ h1 {
   .catalog {
     margin-left: 10px;
     width: 100%;
+<<<<<<< HEAD:src/styles/style-pages/style-tires.scss
     @include media-tablet {
       margin-top: 20px;
       margin-left: 0;
     }
+=======
+>>>>>>> cb7986ec2107192ae0ec3aeeb447bb84f6ad627b:src/styles/common/style-tires.scss
     .on-popularity {
       margin: 0;
       padding: 0;
@@ -594,6 +602,7 @@ h1 {
           justify-content: space-between;
           flex-wrap: wrap;
           margin-bottom: 10px;
+<<<<<<< HEAD:src/styles/style-pages/style-tires.scss
           .block-filter-mobile-link {
             display: none;
             align-items: center;
@@ -616,6 +625,8 @@ h1 {
               display: flex;
             }
           }
+=======
+>>>>>>> cb7986ec2107192ae0ec3aeeb447bb84f6ad627b:src/styles/common/style-tires.scss
           .block-grid {
             display: flex;
             align-items: center;
@@ -669,9 +680,12 @@ h1 {
 }
 .actions-card.tires {
   margin-bottom: 30px;
+<<<<<<< HEAD:src/styles/style-pages/style-tires.scss
   @include media-laptop {
     width: 100%;
   }
+=======
+>>>>>>> cb7986ec2107192ae0ec3aeeb447bb84f6ad627b:src/styles/common/style-tires.scss
   .product-list {
     .row-product-list-2 {
       justify-content: flex-start;
@@ -767,6 +781,7 @@ h1 {
 }
 .pluses {
   background: #f9f9fa;
+<<<<<<< HEAD:src/styles/style-pages/style-tires.scss
   padding: 18px 18px 18px 80px;
   margin-bottom: 30px;
   @include media-laptop {
@@ -780,6 +795,10 @@ h1 {
     width: 98%;
     margin: 0 auto 30px auto;
   }
+=======
+  padding: 18px 0 18px 80px;
+  margin-bottom: 30px;
+>>>>>>> cb7986ec2107192ae0ec3aeeb447bb84f6ad627b:src/styles/common/style-tires.scss
   p {
     font: 400 13px/22px $font;
     color: #555;
@@ -797,6 +816,7 @@ h1 {
 }
 .answers {
   margin-bottom: 60px;
+<<<<<<< HEAD:src/styles/style-pages/style-tires.scss
   @include media-laptop {
     width: 95%;
     margin: 0 auto 60px auto;
@@ -805,6 +825,8 @@ h1 {
     width: 98%;
     margin: 0 auto 60px auto;
   }
+=======
+>>>>>>> cb7986ec2107192ae0ec3aeeb447bb84f6ad627b:src/styles/common/style-tires.scss
   h1 {
     font: 700 15px/23px $font;
     color: #222;

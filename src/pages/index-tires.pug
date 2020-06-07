@@ -9,6 +9,7 @@ block content
         p – Шины  
       h1 Шины 205/55 R16
       form.filter(action="filter.php", method="post")
+<<<<<<< HEAD
         mixin block-filter
           .block-filter
             .block-filter-mobile
@@ -225,6 +226,211 @@ block content
               .reset
                 button(type="submit") сбросить
         +block-filter
+=======
+        .block-filter
+          .filter-auto-drop
+            p Фильтр по авто
+            +icon('arrow-bottom')
+          .dropdown-auto
+            .calculator
+              .tires
+                .row-parameters
+                  .block-product
+                    label Марка
+                      span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                    .select
+                      .select__header
+                        span.select__current Cadilac
+                        .select-arrow-button
+                      .select__body
+                        .select__item Cadilac 1
+                        .select__item Cadilac 2
+                        .select__item Cadilac 3
+                  .block-product
+                    label Модель
+                      span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                    .select
+                      .select__header
+                        span.select__current Cadilac
+                        .select-arrow-button
+                      .select__body
+                        .select__item Cadilac 1
+                        .select__item Cadilac 2
+                        .select__item Cadilac 3
+                  .block-product
+                    label Год выпуска
+                      span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                    .select
+                      .select__header
+                        span.select__current 2005 - 2011
+                        .select-arrow-button
+                      .select__body
+                        .select__item 2003 - 2004
+                        .select__item 2000 - 2002
+                        .select__item 1995 - 2000
+                  .block-product
+                    label Модификация
+                      span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                    .select
+                      .select__header
+                        span.select__current 3.6 V6
+                        .select-arrow-button
+                      .select__body
+                        .select__item 3.6 V5
+                        .select__item 3.6 V4
+                        .select__item 3.6 V3
+                .row-lifetime 
+                  p Заводская комплектация
+                  .block-lifetime 
+                    input#check29(type="radio", name="checkbox10") 
+                    label.check(for="check29")
+                    label.text(for="check29") 255/45 R18 задняя ось
+                  .block-lifetime 
+                    input#check210(type="radio", name="checkbox10", checked)
+                    label.check(for="check210")
+                    label.text(for="check210") 235/50 R18 для всех осей
+                  .block-lifetime 
+                    input#check211(type="radio", name="checkbox10")
+                    label.check(for="check211")
+                    label.text(for="check211") 265/45 R18 задняя ось
+                .row-select
+                  button(type="submit") сбросить
+          .filter-parameters-drop
+            p Фильтр по параметрам
+            +icon('arrow-bottom')
+          .dropdown-parameters
+            .summ
+              label Цена
+              .block-summ
+                input#amount.number(type="text")
+              span - 
+              .block-summ
+                input#amount1.number(type="text")
+              #slider-range
+              .number-summ
+                p 0
+                p 10690
+            .calculator
+              .tires
+                .row-parameters
+                  .block-product
+                    label Ширина
+                      span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                    .select
+                      .select__header
+                        span.select__current 205
+                        .select-arrow-button
+                      .select__body
+                        .select__item 205
+                        .select__item 210
+                        .select__item 215
+                  span.dash /
+                  .block-product
+                    label Высота
+                      span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                    .select
+                      .select__header
+                        span.select__current 55
+                        .select-arrow-button
+                      .select__body
+                        .select__item 55
+                        .select__item 65
+                        .select__item 75
+                  .block-product
+                    label Диаметр
+                      span.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                    .select
+                      .select__header
+                        span.select__current R 15
+                        .select-arrow-button
+                      .select__body
+                        .select__item R 15
+                        .select__item R 16
+                        .select__item R 17
+                .row-lifetime 
+                  p Сезонность
+                  .block-lifetime 
+                    input#check9(type="radio", name="checkbox1", checked) 
+                    label.check(for="check9")
+                    label.text(for="check9") Летняя
+                  .block-lifetime 
+                    input#check10(type="radio", name="checkbox1")
+                    label.check(for="check10")
+                    label.text(for="check10") Зимняя
+                .row-lifetime 
+                  p Шипы
+                  .block-lifetime 
+                    input#check1(type="radio", name="checkbox2", checked) 
+                    label.check(for="check1")
+                    label.text(for="check1") Нешипованные
+                  .block-lifetime 
+                    input#check2(type="radio", name="checkbox2")
+                    label.check(for="check2")
+                    label.text(for="check2") Шипованные
+                .row-lifetime 
+                  .block-lifetime 
+                    input#check4(type="checkbox", checked) 
+                    label.check(for="check4")
+                    label.text(for="check4") RunFlat
+                      span.question.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
+                  .block-lifetime 
+                    input#check5(type="checkbox") 
+                    label.check(for="check5")
+                    label.text(for="check5") Коммерческие
+                  .block-lifetime 
+                    input#check6(type="checkbox")
+                    label.check(for="check6")
+                    label.text(for="check6") Распродажа
+                .row-lifetime
+                  p Производители
+                  .block-lifetime 
+                    input#check7(type="radio", name="checkbox3", checked) 
+                    label.check(for="check7")
+                    label.text(for="check7") Michelin
+                  .block-lifetime 
+                    input#check8(type="radio", name="checkbox3")
+                    label.check(for="check8")
+                    label.text(for="check8") Pirelli
+                  .block-lifetime 
+                    input#check18(type="radio", name="checkbox3")
+                    label.check(for="check18")
+                    label.text(for="check18") Bridgestone
+                  .block-lifetime 
+                    input#check17(type="radio", name="checkbox3")
+                    label.check(for="check17")
+                    label.text(for="check17") Goodyear
+                  .block-lifetime 
+                    input#check11(type="radio", name="checkbox3")
+                    label.check(for="check11")
+                    label.text(for="check11") Nokian Tyres
+                  .block-lifetime 
+                    input#check12(type="radio", name="checkbox3")
+                    label.check(for="check12")
+                    label.text(for="check12") Dunlop
+                  .block-lifetime 
+                    input#check13(type="radio", name="checkbox3")
+                    label.check(for="check13")
+                    label.text(for="check13") TOYO
+                  .block-lifetime 
+                    input#check14(type="radio", name="checkbox3")
+                    label.check(for="check14")
+                    label.text(for="check14") Nokian Nordman
+                  .block-lifetime 
+                    input#check15(type="radio", name="checkbox3")
+                    label.check(for="check15")
+                    label.text(for="check15") BFGoodrich
+                  .block-lifetime 
+                    input#check16(type="radio", name="checkbox3")
+                    label.check(for="check16")
+                    label.text(for="check16") Yokohama
+                .row-lifetime 
+                  .block-lifetime 
+                    input#check19(type="checkbox", checked)
+                    label.check(for="check19")
+                    label.text(for="check19") Скрыть с количеством менее 4 шт.
+                .row-select
+                  button(type="submit") сбросить
+>>>>>>> cb7986ec2107192ae0ec3aeeb447bb84f6ad627b
         .catalog
           .calculator.on-popularity
             .tires
@@ -238,15 +444,19 @@ block content
                       .select__item по популярности
                       .select__item по популярности 1
                       .select__item по популярности 2
+<<<<<<< HEAD
                 .block-filter-mobile-link
                   +icon('foundation-filter')
                   p Фильтры
+=======
+>>>>>>> cb7986ec2107192ae0ec3aeeb447bb84f6ad627b
                 .block-grid
                   .grid-1
                     +icon('grid-1')
                   .grid-2
                     +icon('grid-2')
                   .grid-3
+<<<<<<< HEAD
                     +icon('grid-3')          
           .actions-card.tires.swiper-container
             .product-list.swiper-wrapper
@@ -303,6 +513,640 @@ block content
                 +block-product-list
                 +block-product-list
                 +block-product-list
+=======
+                    +icon('grid-3')
+                .block-filter-mobile
+                  +icon('foundation-filter')
+                  p Фильтры           
+          .actions-card.tires.swiper-container
+            .product-list.swiper-wrapper
+              .row-product-list-2.swiper-slide
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+              .row-product-list-2.swiper-slide
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')
+                .block-product-list
+                  +icon('present')  
+                  img(src="img/block-product-wheel.png", alt="")
+                  p.name Kumho Ecowing ES01 KH27 
+                  .number-hover
+                    span.green
+                    span.green
+                    span.green
+                    span.grey
+                    p.text 27 шт. 
+                  p.worth от 9180 ₽
+                  a(href="")
+                    +icon('like')
+                  a(href="")  
+                    +icon('chart')  
+                  p.worth-hover 9180 ₽
+                  a.view-hover(href="card-tires-1.html") 
+                    span Быстрый просмотр
+                  .row-form
+                    .input-group
+                      input.button-minus(type="button", value="-")
+                      input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                      input.button-plus(type="button", value="+")
+                    .add-cart
+                      button(type="submit")
+                        +icon('add-cart')     
+>>>>>>> cb7986ec2107192ae0ec3aeeb447bb84f6ad627b
           .swiper
             .icon-left.swiper-button-prev
               +icon('arrow-left-tires')
