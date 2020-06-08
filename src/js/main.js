@@ -198,6 +198,17 @@ $(document).ready(function(){
 });
 });
 
+$(document).ready(function(){  
+  $('.block-filter-mobile-link').on("click", function(){ 
+      $('.block-filter').fadeToggle(); 
+      $('html').toggleClass('active');
+  });
+  $('.block-right').on("click", function(){ 
+    $('.block-filter').fadeToggle(); 
+    $("html").removeClass("active");
+  });
+});
+
 $(document).ready(function(){
   $(".active-tires").click(function(){
     $(this).toggleClass("active");

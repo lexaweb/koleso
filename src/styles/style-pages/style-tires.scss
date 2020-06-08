@@ -50,8 +50,112 @@ h1 {
   .block-filter {
     width: 250px;
     min-width: 250px;
+    background: #fff;
+    padding-bottom: 87px;
     @include media-tablet {
       display: none;
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .block-filter-mobile {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      background: #f9f9fa;
+      padding: 3px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 2;
+      .block-left {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        svg {
+          width: 18px;
+          height: 18px;
+          margin-right: 8px;
+        }
+        p {
+          font: 400 18px/23px $font;
+          color: #222;
+          display: inline-block;
+        }
+      }
+      .block-right {
+        cursor: pointer;
+        transition: 0.3s;
+        margin-right: 20px;
+        svg {
+          width: 44px;
+          height: 44px;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      @include media-tablet {
+        display: flex;
+      }
+    }
+    .row-select-mobile {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      padding-bottom: 5px;
+      text-align: center;
+      background: #fff;
+      box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.05);
+      z-index: 2;
+      display: none;
+      @include media-tablet {
+        display: block;
+      }
+      .product {
+        padding: 0 10px;
+        padding-right: 25px;
+        button {
+          font: 700 15px/23px $font;
+          color: #fff;
+          border: 1px solid #e22f22;
+          background: #e22f22;
+          border-radius: 5px;
+          padding: 10px 42px;
+          cursor: pointer;
+          transition: .3s;
+          margin-top: 10px;
+          width: 100%;
+          &:hover {
+            background: #fff;
+            color: #e22f22;
+          }
+        }
+       
+      }
+      .reset {
+        justify-content: center;
+        display: flex;
+        margin-top: 3px;
+        button {
+          display: block;
+          font: 400 13px/22px $font;
+          color: #555;
+          background: transparent;
+          border: none;
+          border-bottom: 1px dotted #555;
+          transition: 0.3s;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
     }
     .filter-auto-drop {
       display: flex;
@@ -60,6 +164,9 @@ h1 {
       border: 1px solid #e5e5e5;
       padding: 10px 20px;
       cursor: pointer;
+      @include media-tablet {
+        margin: 62.4px 10px 0 10px;
+      }
       p {
         font: 700 13px/22px $font;
         color: #222;
@@ -78,6 +185,9 @@ h1 {
       padding: 10px 20px;
       cursor: pointer;
       transition: 0.3s;
+      @include media-tablet {
+        margin: 0 10px 0 10px;
+      }
       p {
         font: 700 13px/22px $font;
         color: #222;
@@ -100,6 +210,12 @@ h1 {
     .dropdown-parameters, .dropdown-auto {
       background: #f9f9fa;
       display: none;
+      @include media-tablet {
+        margin: 0 10px 0 10px;
+      }
+      .calculator {
+        display: block;
+      }
       .summ {
         display: flex;
         justify-content: space-between;
@@ -291,6 +407,9 @@ h1 {
               height: 1px;
               width: 250px;
               border-bottom: 1px solid #e5e5e5;
+              @include media-tablet {
+                width: calc(100% - -45px);
+              }
             }
             .block-product {
               margin: 0;
@@ -334,6 +453,9 @@ h1 {
               height: 1px;
               width: 250px;
               border-bottom: 1px solid #e5e5e5;
+              @include media-tablet {
+                width: calc(100% - -45px);
+              }
             }
             p {
               font: 400 13px/22px $font;
@@ -379,6 +501,9 @@ h1 {
           }
           .row-select {
             text-align: center;
+            @include media-tablet {
+              display: none;
+            }
             button {
               padding: 10px 42px;
             }
@@ -446,6 +571,10 @@ h1 {
   .catalog {
     margin-left: 10px;
     width: 100%;
+    @include media-tablet {
+      margin-top: 20px;
+      margin-left: 0;
+    }
     .on-popularity {
       margin: 0;
       padding: 0;
@@ -465,6 +594,28 @@ h1 {
           justify-content: space-between;
           flex-wrap: wrap;
           margin-bottom: 10px;
+          .block-filter-mobile-link {
+            display: none;
+            align-items: center;
+            cursor: pointer;
+            transform: 0.3s;
+            &:hover {
+              opacity: 0.7;
+            }
+            svg {
+              width: 18px;
+              height: 18px;
+              margin-right: 8px;
+            }
+            p {
+              font: 400 13px/22px $font;
+              color: #e22f22;
+              display: inline-block;
+            }
+            @include media-tablet {
+              display: flex;
+            }
+          }
           .block-grid {
             display: flex;
             align-items: center;
@@ -518,6 +669,9 @@ h1 {
 }
 .actions-card.tires {
   margin-bottom: 30px;
+  @include media-laptop {
+    width: 100%;
+  }
   .product-list {
     .row-product-list-2 {
       justify-content: flex-start;
@@ -613,8 +767,19 @@ h1 {
 }
 .pluses {
   background: #f9f9fa;
-  padding: 18px 0 18px 80px;
+  padding: 18px 18px 18px 80px;
   margin-bottom: 30px;
+  @include media-laptop {
+    width: 95%;
+    margin: 0 auto 30px auto;
+  }
+  @include media-tablet {
+    padding: 15px;
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto 30px auto;
+  }
   p {
     font: 400 13px/22px $font;
     color: #555;
@@ -632,6 +797,14 @@ h1 {
 }
 .answers {
   margin-bottom: 60px;
+  @include media-laptop {
+    width: 95%;
+    margin: 0 auto 60px auto;
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto 60px auto;
+  }
   h1 {
     font: 700 15px/23px $font;
     color: #222;
