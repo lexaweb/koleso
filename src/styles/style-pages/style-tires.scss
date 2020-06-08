@@ -1,27 +1,13 @@
 @import '../mixins/media';
 
 .breadcrumb {
-  font: 400 13px/22px $font;
-  color: #aaa;
-  margin: 25px 0 20px 0;
   @include media-laptop {
     width: 95%;
     margin: 25px auto 20px auto;
-}
-@include media-mobile {
-  width: 98%;
-  margin: 25px auto 20px auto;
-}
-  a {
-    display: inline-block;
-    color: #222;
-    transition: 0.3s;
-    &:hover {
-      opacity: 0.7;
-    }
   }
-  p {
-    display: inline-block;
+  @include media-mobile {
+    width: 98%;
+    margin: 25px auto 20px auto;
   }
 }
 h1 {
@@ -128,7 +114,7 @@ h1 {
           border-radius: 5px;
           padding: 10px 42px;
           cursor: pointer;
-          transition: .3s;
+          transition: 0.3s;
           margin-top: 10px;
           width: 100%;
           &:hover {
@@ -136,7 +122,6 @@ h1 {
             color: #e22f22;
           }
         }
-       
       }
       .reset {
         justify-content: center;
@@ -198,7 +183,8 @@ h1 {
         height: 6px;
       }
     }
-    .filter-parameters-drop.active, .filter-auto-drop.active {
+    .filter-parameters-drop.active,
+    .filter-auto-drop.active {
       border: none;
       background: #f9f9fa;
       transition: 0.3s;
@@ -207,7 +193,8 @@ h1 {
         transform: rotate(180deg);
       }
     }
-    .dropdown-parameters, .dropdown-auto {
+    .dropdown-parameters,
+    .dropdown-auto {
       background: #f9f9fa;
       display: none;
       @include media-tablet {
@@ -245,46 +232,46 @@ h1 {
           color: #000;
           margin-top: 8px;
         }
-       #slider-range {
-         position: relative;
-        width: 95%;
-        height: 3px;
-        background: #e5e5e5;
-        border-radius: 2px;
-        margin: 30px 0 7px 0;
-        display: flex;
-        align-items: center;
-         .ui-slider-handle {
-           width: 18px;
-           height: 18px;
-           background: #fff;
-           border: 3px solid #e22f22;
-           position: absolute;
+        #slider-range {
+          position: relative;
+          width: 95%;
+          height: 3px;
+          background: #e5e5e5;
+          border-radius: 2px;
+          margin: 30px 0 7px 0;
+          display: flex;
+          align-items: center;
+          .ui-slider-handle {
+            width: 18px;
+            height: 18px;
+            background: #fff;
+            border: 3px solid #e22f22;
+            position: absolute;
             z-index: 2;
             cursor: default;
             touch-action: none;
             border-radius: 50%;
             margin: 0;
-         }
-         .ui-slider-range {
-          background: #e22f22;
-          border-radius: 3px;
-          position: absolute;
-          height: 100%;
-          z-index: 1;
-          display: block;
-         }
-       }
-       .number-summ {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         width: 100%;
-         p {
-          font: 400 12px/18px $font;
-          color: #aaa;
-         }
-       }
+          }
+          .ui-slider-range {
+            background: #e22f22;
+            border-radius: 3px;
+            position: absolute;
+            height: 100%;
+            z-index: 1;
+            display: block;
+          }
+        }
+        .number-summ {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          p {
+            font: 400 12px/18px $font;
+            color: #aaa;
+          }
+        }
       }
       .calculator {
         margin: 0;
@@ -294,101 +281,103 @@ h1 {
           padding: 15px 20px;
           .scroll-pane {
             overflow: unset !important;
-            .scroll-pane
-            {width: 300px;
-            height: 200px;
-            overflow: unset;}
-            
-            .jspContainer{
-            overflow: hidden;
-            position: relative;
+            .scroll-pane {
+              width: 300px;
+              height: 200px;
+              overflow: unset;
             }
-            
-            .jspPane{
-            position: absolute;
+
+            .jspContainer {
+              overflow: hidden;
+              position: relative;
             }
-            
-            .jspVerticalBar{
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 10px;
-            height: 100%;
+
+            .jspPane {
+              position: absolute;
             }
-            
-            .jspHorizontalBar{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 1px;
-            height: 16px;
-            background: red;
+
+            .jspVerticalBar {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 10px;
+              height: 100%;
             }
-            
-            .jspCap{
-            display: none;
+
+            .jspHorizontalBar {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 1px;
+              height: 16px;
+              background: red;
             }
-            
-            .jspHorizontalBar .jspCap{
-            float: left;
+
+            .jspCap {
+              display: none;
             }
-            
-            .jspTrack{
-            background: #e5e5e5;
-            position: relative;
-            width: 1px;
-            height: 290px !important;
-            padding-top: 15px;
+
+            .jspHorizontalBar .jspCap {
+              float: left;
             }
-            
-            .jspDrag{
-            background: #e22f22;
-            position: relative;
-            top: 0;
-            left: -2.5px;
-            height: 20% !important;
-            width: 5px;
-            border-radius: 5px;
-            cursor: pointer;
+
+            .jspTrack {
+              background: #e5e5e5;
+              position: relative;
+              width: 1px;
+              height: 290px !important;
+              padding-top: 15px;
             }
-            
-            .jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag{
-            float: left;
-            height: 100%;
+
+            .jspDrag {
+              background: #e22f22;
+              position: relative;
+              top: 0;
+              left: -2.5px;
+              height: 20% !important;
+              width: 5px;
+              border-radius: 5px;
+              cursor: pointer;
             }
-            
-            .jspArrow{
-            background: #50506d;
-            text-indent: -20000px;
-            display: block;
-            cursor: pointer;
-            padding: 0;
-            margin: 0;
+
+            .jspHorizontalBar .jspTrack,
+            .jspHorizontalBar .jspDrag {
+              float: left;
+              height: 100%;
             }
-            
-            .jspArrow.jspDisabled{
-            cursor: default;
-            background: #80808d;
+
+            .jspArrow {
+              background: #50506d;
+              text-indent: -20000px;
+              display: block;
+              cursor: pointer;
+              padding: 0;
+              margin: 0;
             }
-            
-            .jspVerticalBar .jspArrow{
-            height: 16px;
+
+            .jspArrow.jspDisabled {
+              cursor: default;
+              background: #80808d;
             }
-            
-            .jspHorizontalBar .jspArrow{
-            width: 10px;
-            float: left;
-            height: 100%;
+
+            .jspVerticalBar .jspArrow {
+              height: 16px;
             }
-            
-            .jspVerticalBar .jspArrow:focus{
-            outline: none;
+
+            .jspHorizontalBar .jspArrow {
+              width: 10px;
+              float: left;
+              height: 100%;
             }
-            
-            .jspCorner{
-            background: #eeeef4;
-            float: left;
-            height: 100%;
+
+            .jspVerticalBar .jspArrow:focus {
+              outline: none;
+            }
+
+            .jspCorner {
+              background: #eeeef4;
+              float: left;
+              height: 100%;
             }
           }
           &::before {
@@ -398,7 +387,7 @@ h1 {
             position: relative;
             justify-content: flex-start;
             flex-wrap: wrap;
-            padding-bottom: 15px; 
+            padding-bottom: 15px;
             &::before {
               content: '';
               position: absolute;
@@ -623,9 +612,9 @@ h1 {
               display: none;
             }
             .grid {
-              &-1
-              ,&-2
-              ,&-3 {
+              &-1,
+              &-2,
+              &-3 {
                 cursor: pointer;
                 transition: 0.3s;
                 svg {
@@ -672,7 +661,7 @@ h1 {
   @include media-laptop {
     width: 100%;
   }
-  .product-list {
+  .product-list.actions-card-form.tires {
     .row-product-list-2 {
       justify-content: flex-start;
       margin-top: 10px;
@@ -707,23 +696,24 @@ h1 {
     }
   }
 }
-      .calculator.on-popularity {
-        .row-parameters {
-          .block-product {
-            .select {
-              .select__body {
-                z-index: 2;
-              }
-            }
-          }
+.calculator.on-popularity {
+  .row-parameters {
+    .block-product {
+      .select {
+        .select__body {
+          z-index: 2;
         }
       }
+    }
+  }
+}
 .swiper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  .icon-left, .icon-right {
+  .icon-left,
+  .icon-right {
     svg {
       width: 11px;
       height: 24px;
@@ -758,7 +748,7 @@ h1 {
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: #e22f22;
     border-radius: 5px;
-    color: #fff;  
+    color: #fff;
     transition: 0.3s;
   }
   .swiper-container-thumbs {

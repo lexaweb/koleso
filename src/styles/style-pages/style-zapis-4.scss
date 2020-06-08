@@ -1,28 +1,14 @@
 @import '../mixins/media';
 
 .breadcrumb {
-  font: 400 13px/22px $font;
-  color: #aaa;
-  margin: 25px 0 20px 0;
-  a {
-    display: inline-block;
-    color: #222;
-    transition: 0.3s;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-  p {
-    display: inline-block;
-  }
   @include media-tablet {
     width: 98%;
     margin: 25px auto 20px auto;
-}
-@include media-mobile {
-  width: 98%;
-  margin: 25px auto 20px auto;
-}
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 25px auto 20px auto;
+  }
 }
 .zapis {
   font: 400 29px/33px $font;
@@ -93,10 +79,10 @@
     margin: 0 auto 60px auto;
   }
   @include media-tablet-horizontal {
-  grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 6fr;
   }
   @include media-tablet-horizontal {
-  grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 4fr;
   }
   @include media-mobile {
     width: 98%;

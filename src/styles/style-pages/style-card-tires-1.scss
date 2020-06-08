@@ -1,20 +1,6 @@
 @import '../mixins/media';
 
 .breadcrumb {
-  font: 400 13px/22px $font;
-  color: #aaa;
-  margin: 25px 0 20px 0;
-  a {
-    display: inline-block;
-    color: #222;
-    transition: 0.3s;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-  p {
-    display: inline-block;
-  }
   @include media-laptop {
     width: 95%;
     margin: 25px auto 20px auto;
@@ -484,13 +470,9 @@
       display: block;
     }
     .block-inf-product-mobile {
-      &-specifications
-      ,&-description
-      ,&-existence
-      ,&-suitable
-      ,&-buy {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
         background: #f9f9fa;
         border: 1px solid #e5e5e5;
@@ -514,25 +496,66 @@
         color: #e22f22;
       } 
     }
-      }
-      &-description
-      ,&-existence
-      ,&-suitable
-      ,&-buy {
+    .dropdown {
+        padding: 30px 0;
+        display: none;
+        width: 100%;
+        cursor: auto;
+        p {
+          color: #555;
+          font: 400 13px/22px $font;
+        } 
+        ul
+        li {
+          width: 100%;  
+          position: relative;
+          margin-bottom: 10px;
+          display: block;
+        position: relative;
+        overflow: hidden;
+        &:after {
+            content:'';
+            display: block;
+            overflow: hidden;
+            height: 28px;
+            border-bottom: 1px dotted #e5e5e5;
+        }
+        .key {
+            display: block;
+            float: left;
+            z-index: 2;
+            padding-right: 2px;
+        }
+        .value {
+            display: block;
+            float: right;
+            z-index: 2;
+            padding-left: 2px;
+        }
+          span {
+            font: 400 13px/22px $font;
+            color: #555;  
+          }
+        }
+        p {
+          color: #555;
+          font: 400 13px/22px $font;
+        }
+    }
+      &:nth-child(2)
+      ,&:nth-child(3)
+      ,&:nth-child(4)
+      ,&:nth-child(5) {
         border-top: none;
       }
   }
-  .block-inf-product-mobile {
-    &-specifications.active
-  ,&-existence.active
-  ,&-suitable.active
-  ,&-buy.active
-  ,&-description.active {
+  .block-inf-product-mobile.active {
+
       border-top: 2px solid #e22f22;
       border-bottom: 1px solid transparent;
       transition: 0.3s;
       background: #fff;
-      p {
+      .inf {
         color: #222;
         transition: 0.3s;
       }
@@ -540,68 +563,12 @@
         transform: rotate(90deg);
       }
       &:hover {
-        p {
+        .inf {
           color: #e22f22;
         }
       }
     }
   }
-  .dropdown {
-    &-specifications
-      ,&-description
-      ,&-existence
-      ,&-suitable
-      ,&-buy {
-      padding: 30px 10px;
-      border-bottom: 1px solid #E5E5E5;
-      border-left: 1px solid #E5E5E5;
-      border-right: 1px solid #E5E5E5;
-      display: none;
-      p {
-        color: #555;
-        font: 400 13px/22px $font;
-      }
-    }
-    &-specifications {
-      ul
-      li {
-        width: 100%;  
-        position: relative;
-        margin-bottom: 10px;
-        display: block;
-      position: relative;
-      overflow: hidden;
-      &:after {
-          content:'';
-          display: block;
-          overflow: hidden;
-          height: 28px;
-          border-bottom: 1px dotted #e5e5e5;
-      }
-      .key {
-          display: block;
-          float: left;
-          z-index: 2;
-          padding-right: 2px;
-      }
-      .value {
-          display: block;
-          float: right;
-          z-index: 2;
-          padding-left: 2px;
-      }
-        span {
-          font: 400 13px/22px $font;
-          color: #555;  
-        }
-      }
-      p {
-        color: #555;
-        font: 400 13px/22px $font;
-      }
-    }
-  }
-    }
     
   .row-actions-card-3 {
     display: flex;
@@ -635,7 +602,7 @@
      }
     }
   }
- .product-list {
+ .product-list.card-tires-1 {
    margin-bottom: 10px;
    overflow-y: unset;
    width: 100%;
@@ -774,8 +741,8 @@
     }
   }
 }
-.actions-card.card-tires {
-  .product-list {
+.actions-card {
+  .product-list.card-tires {
     overflow-y: auto;
  .row-product-list-2 {
       flex-wrap: nowrap;
