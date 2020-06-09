@@ -1,16 +1,15 @@
 @import '../mixins/media';
 
-.breadcrumb {
+.breadcrumb.actions-card {
   @include media-laptop {
     width: 90%;
     margin: 25px auto 20px auto;
   }
   @include media-mobile {
     width: 98%;
-    margin: 25px auto 20px auto;
   }
 }
-.head {
+.head-actions-card {
   font: 400 29px/33px $font;
   color: #222;
   margin-bottom: 40px;
@@ -29,7 +28,7 @@
 .actions-card {
   margin-bottom: 60px;
   @include media-laptop {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     margin-bottom: 60px;
   }

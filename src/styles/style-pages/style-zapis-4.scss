@@ -1,16 +1,18 @@
 @import '../mixins/media';
 
-.breadcrumb {
-  @include media-tablet {
-    width: 98%;
+.breadcrumb.zapis-4 {
+  @include media-laptop {
+    width: 90%;
     margin: 25px auto 20px auto;
+  }
+  @include media-tablet {
+    width: 90%;
   }
   @include media-mobile {
     width: 98%;
-    margin: 25px auto 20px auto;
   }
 }
-.zapis {
+.head-zapis-4 {
   font: 400 29px/33px $font;
   color: #222;
   margin-bottom: 40px;

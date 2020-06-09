@@ -245,7 +245,6 @@ body {
               align-items: center;
               border-radius: 5px;
               border: 1px solid #e5e5e5;
-              margin: 35px 0;
               .block-view {
                 border-right: 1px solid #e5e5e5;
                 background: #f9f9fa;
@@ -387,7 +386,6 @@ body {
                   justify-content: space-between;
                   .season,
                   .thorns {
-                    margin: 20px 0;
                     .block-view {
                       label {
                         padding: 6px 8px;
@@ -455,7 +453,6 @@ body {
                 }
                 .row-view {
                   justify-content: center;
-                  margin: 20px 0;
                   .season,
                   .thorns {
                     .block-view {
@@ -525,7 +522,6 @@ body {
                 }
                 .row-view {
                   justify-content: center;
-                  margin: 20px 0;
                   .season,
                   .thorns {
                     .block-view {
@@ -777,7 +773,6 @@ body {
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          margin: 35px 0;
           .season,
           .thorns {
             display: flex;
@@ -785,6 +780,7 @@ body {
             align-items: center;
             border-radius: 5px;
             border: 1px solid #e5e5e5;
+            margin: 35px 0;
             .block-view {
               border-right: 1px solid #e5e5e5;
               background: #f9f9fa;
@@ -928,7 +924,6 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
             p {
               color: #222;
               &:nth-child(1) {
@@ -967,6 +962,7 @@ body {
             background: url('../img/block-stocks-img-1.png') no-repeat;
             padding-top: 60px;
             transition: 0.3s;
+            margin-top: 30px;
             &:hover {
               opacity: 0.7;
             }
@@ -1016,6 +1012,7 @@ body {
             transition: 0.3s;
             display: flex;
             align-items: flex-end;
+            margin-top: 30px;
             &:hover {
               opacity: 0.7;
             }
@@ -1046,6 +1043,7 @@ body {
               transition: 0.3s;
               display: flex;
               align-items: flex-end;
+              margin-top: 30px;
               &:hover {
                 opacity: 0.7;
               }
@@ -1114,9 +1112,6 @@ body {
               text-transform: uppercase;
             }
           }
-          &-1 {
-            margin-bottom: 36px;
-          }
         }
         .block-catalog {
           &-1,
@@ -1132,6 +1127,7 @@ body {
             border-radius: 5px;
             transition: 0.3s;
             display: block;
+            margin-top: 36px;
             &::after {
               content: '';
               position: absolute;
@@ -1335,7 +1331,6 @@ body {
       // product-list
       .product-list {
         margin-bottom: 60px;
-        overflow-y: hidden;
         h1 {
           font: 700 20px/22px $font;
           color: #222;
@@ -1386,7 +1381,7 @@ body {
             justify-content: space-between;
             margin-top: 30px;
             height: 390px;
-            width: 1140px;
+            overflow-y: hidden;
             .block-product-list {
               position: relative;
               border: 1px solid #e5e5e5;
@@ -1561,7 +1556,6 @@ body {
       // product-list
       // video
       .video {
-        overflow-y: hidden;
         .row-video {
           &-1 {
             display: flex;
@@ -1598,7 +1592,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            width: 1140px;
+            overflow-y: hidden;
             .block-video-img {
               width: 220px;
               a {
@@ -1661,6 +1655,47 @@ body {
         }
       }
       // egg
+      @include media-laptop {
+        .calculator {
+          width: 98%;
+          margin: 40px auto 60px;
+        }
+        .stocks {
+          width: 98%;
+          margin: 0 auto 60px auto;
+        }
+        .catalog {
+          width: 98%;
+          margin: 0 auto 60px auto;
+        }
+        .map {
+          width: 98%;
+          margin: 0 auto 60px auto;
+        }
+        .product-list {
+          width: 98%;
+          margin: 0 auto 40px auto;
+          .row-product-list-2 {
+            .block-product-list {
+              margin-right: 5px;
+              &:nth-child(5) {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+        .video {
+          width: 98%;
+          margin: 0 auto;
+          .block-video-img {
+            margin-right: 5px;
+          }
+        }
+        .egg {
+          width: 98%;
+          margin: 40px auto;
+        }
+      }
       @include media-tablet-horizontal {
         .calculator,
         .calculator-mobile {
@@ -1673,9 +1708,12 @@ body {
           .row-view {
             justify-content: space-between;
             flex-wrap: wrap;
+            .season,
             .thorns {
-              margin: 0;
-              margin-top: 40px;
+              margin: 17.5px 0;
+            }
+            .thorns {
+              margin-left: 0;
             }
           }
           .tires,
@@ -1691,12 +1729,6 @@ body {
           .row-stocks-2 {
             justify-content: center;
             flex-wrap: wrap;
-            .block-stocks-img-1 {
-              margin-bottom: 15px;
-            }
-            .block-stocks-two {
-              margin: 15px 0;
-            }
           }
         }
         .catalog {
@@ -1773,9 +1805,6 @@ body {
           }
           .row-stocks-2 {
             justify-content: center;
-            .block-stocks-img-1 {
-              margin: 15px 0;
-            }
             .block-stocks-two {
               margin: 0;
             }
@@ -1855,7 +1884,9 @@ body {
               display: flex;
               justify-content: center;
               flex-wrap: wrap;
-              margin: 15px 0;
+              .block-stocks-img-3 {
+                margin-top: 15px;
+              }
             }
           }
         }

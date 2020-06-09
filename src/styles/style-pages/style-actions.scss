@@ -1,16 +1,12 @@
 @import '../mixins/media';
 
-.breadcrumb {
+.breadcrumb.actions {
   @include media-laptop {
     width: 98%;
     margin: 25px auto 20px auto;
   }
-  @include media-mobile {
-    width: 98%;
-    margin: 25px auto 20px auto;
-  }
 }
-h1 {
+.head-actions {
   font: 400 29px/33px $font;
   color: #222;
   margin-bottom: 40px;
