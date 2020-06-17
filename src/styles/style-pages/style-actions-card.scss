@@ -1,30 +1,15 @@
 @import '../mixins/media';
 
-.breadcrumb {
-  font: 400 13px/22px $font;
-  color: #aaa;
-  margin: 25px 0 20px 0;
-  a {
-    display: inline-block;
-    color: #222;
-    transition: 0.3s;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-  p {
-    display: inline-block;
-  }
+.breadcrumb.actions-card {
   @include media-laptop {
     width: 90%;
     margin: 25px auto 20px auto;
+  }
+  @include media-mobile {
+    width: 98%;
+  }
 }
-@include media-mobile {
-  width: 98%;
-  margin: 25px auto 20px auto;
-}
-}
-.head {
+.head-actions-card {
   font: 400 29px/33px $font;
   color: #222;
   margin-bottom: 40px;
@@ -43,69 +28,69 @@
 .actions-card {
   margin-bottom: 60px;
   @include media-laptop {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     margin-bottom: 60px;
-}
-@include media-tablet {
-  width: 98%;
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
-@include media-mobile {
-  width: 98%;
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
+  }
+  @include media-tablet {
+    width: 98%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
   .row-actions-card {
-   &-2 {
-     .text {
-       h2 {
-         font: 700 15px/23px $font;
-         color: #222;
-         margin: 50px 0 15px 0;
-       }
-       p {
-        font: 400 13px/22px $font;
-        color: #222;
-        margin-bottom: 15px;
-       }
-     }
-   }
-   &-3 {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     margin-top: 35px;
-     h2 {
-      font: 700 20px/22px $font;
-      color: #222;
-      text-transform: uppercase;
-     }
-     p {
-      position: relative;
-      font: 400 13px/22px $font;
-      color: #555;
-      padding-bottom: 2px;
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        border-top: 1px dotted #555;
-      }
-      a {
-        transition: 0.3s;
-        &:hover {
-          opacity: 0.7;
+    &-2 {
+      .text {
+        h2 {
+          font: 700 15px/23px $font;
+          color: #222;
+          margin: 50px 0 15px 0;
+        }
+        p {
+          font: 400 13px/22px $font;
+          color: #222;
+          margin-bottom: 15px;
         }
       }
-     }
-   }
+    }
+    &-3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 35px;
+      h2 {
+        font: 700 20px/22px $font;
+        color: #222;
+        text-transform: uppercase;
+      }
+      p {
+        position: relative;
+        font: 400 13px/22px $font;
+        color: #555;
+        padding-bottom: 2px;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          border-top: 1px dotted #555;
+        }
+        a {
+          transition: 0.3s;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
   }
-  .product-list {
+  .product-list.actions-card-form {
     margin-bottom: 10px;
     overflow-y: unset;
     width: 100%;
@@ -125,19 +110,22 @@
         margin-top: 30px;
         margin-right: 10px;
         @include media-laptop {
-          &:nth-child(9), &:nth-child(10)  {
+          &:nth-child(9),
+          &:nth-child(10) {
             display: none;
           }
         }
         @include media-tablet-horizontal {
-          &:nth-child(7), &:nth-child(8)  {
+          &:nth-child(7),
+          &:nth-child(8) {
             display: none;
           }
         }
         @include media-tablet {
           margin-right: 0;
           margin-top: 0;
-          &:nth-child(7), &:nth-child(8)  {
+          &:nth-child(7),
+          &:nth-child(8) {
             display: none;
           }
           .view-hover {
@@ -179,7 +167,8 @@
             justify-content: center;
             left: 10px;
             bottom: 10px;
-            .input-group, .add-cart {
+            .input-group,
+            .add-cart {
               margin-top: 5px;
               margin-right: 0;
             }

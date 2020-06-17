@@ -1,30 +1,12 @@
 @import '../mixins/media';
 
-.breadcrumb {
-  font: 400 13px/22px $font;
-  color: #aaa;
-  margin: 25px 0 20px 0;
-  a {
-    display: inline-block;
-    color: #222;
-    transition: 0.3s;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-  p {
-    display: inline-block;
-  }
+.breadcrumb.actions {
   @include media-laptop {
     width: 98%;
     margin: 25px auto 20px auto;
+  }
 }
-@include media-mobile {
-  width: 98%;
-  margin: 25px auto 20px auto;
-}
-}
-h1 {
+.head-actions {
   font: 400 29px/33px $font;
   color: #222;
   margin-bottom: 40px;
@@ -46,12 +28,12 @@ h1 {
     width: 98%;
     margin: 0 auto;
     margin-bottom: 60px;
-}
-@include media-mobile {
-  width: 98%;
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
   .row-actions {
     &-1 {
       .poster {
@@ -67,7 +49,7 @@ h1 {
               position: absolute;
               top: 50%;
               left: 148%;
-              transform: translate(-50%,-50%);
+              transform: translate(-50%, -50%);
               height: 96px;
               object-fit: cover;
               max-width: none;
@@ -79,7 +61,8 @@ h1 {
         }
       }
     }
-    &-2, &-3 {
+    &-2,
+    &-3 {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -89,7 +72,7 @@ h1 {
       }
       .block-actions {
         width: 250px;
-        margin: 30px 0; 
+        margin: 30px 0;
         @include media-tablet-horizontal {
           margin: 30px 5px;
           width: 33%;
@@ -101,7 +84,7 @@ h1 {
         @include media-mobile {
           width: 100%;
           margin: 15px 0;
-        }    
+        }
         a {
           transition: 0.3s;
           img {

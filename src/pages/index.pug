@@ -60,7 +60,7 @@ block content
             .row-view
               .season
                 .block-view
-                  input#check1(type="radio", name="checkbox1") 
+                  input#check1(type="radio", name="checkbox1", checked) 
                   label(for="check1") Все 
                 .block-view
                   input#check2(type="radio", name="checkbox1")
@@ -73,7 +73,7 @@ block content
                   label(for="check4") Всесезонные 
               .thorns
                 .block-view
-                  input#check5(type="radio", name="checkbox2")
+                  input#check5(type="radio", name="checkbox2", checked)
                   label(for="check5") Без шипов
                 .block-view
                   input#check6(type="radio", name="checkbox2")
@@ -83,7 +83,7 @@ block content
                   label(for="check7") Не важно
             .row-lifetime 
               .block-lifetime 
-                input#check8(type="checkbox") 
+                input#check8(type="checkbox", checked) 
                 label.check(for="check8")
                 label.text(for="check8") RunFlat
                   span.question.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
@@ -148,7 +148,7 @@ block content
                     .select__item Производитель 3
             .row-lifetime 
               .block-lifetime 
-                input#check11(type="checkbox") 
+                input#check11(type="checkbox", checked) 
                 label.check(for="check11")
                 label.text(for="check11") Распродажа
               .block-lifetime 
@@ -260,7 +260,7 @@ block content
             .row-view
               .season
                 .block-view
-                  input#check21(type="radio", name="checkbox1") 
+                  input#check21(type="radio", name="checkbox1", checked) 
                   label(for="check21") Все 
                 .block-view
                   input#check22(type="radio", name="checkbox1")
@@ -273,7 +273,7 @@ block content
                   label(for="check24") Всесезонные 
               .thorns
                 .block-view
-                  input#check25(type="radio", name="checkbox2")
+                  input#check25(type="radio", name="checkbox2", checked)
                   label(for="check25") Без шипов
                 .block-view
                   input#check26(type="radio", name="checkbox2")
@@ -283,7 +283,7 @@ block content
                   label(for="check27") Не важно
             .row-lifetime 
               .block-lifetime 
-                input#check28(type="checkbox") 
+                input#check28(type="checkbox", checked) 
                 label.check(for="check28")
                 label.text(for="check28") RunFlat
                   span.question.tooltip(data-tooltip="Lorem ipsum dolor sit amet") ?
@@ -353,7 +353,7 @@ block content
                     .select__item Производитель 3
             .row-lifetime 
               .block-lifetime 
-                input#check31(type="checkbox") 
+                input#check31(type="checkbox", checked) 
                 label.check(for="check31")
                 label.text(for="check31") Распродажа
               .block-lifetime 
@@ -444,20 +444,15 @@ block content
         .row-catalog-1
           p каталог
         .row-catalog-2
-          .block-catalog-1
-            a(href="")
+          a.block-catalog-1(href="")
             p шины
-          .block-catalog-2
-            a(href="")
+          a.block-catalog-2(href="")
             p диски
-          .block-catalog-3
-            a(href="")
+          a.block-catalog-3(href="")
             p автотовары
-          .block-catalog-4
-            a(href="")
+          a.block-catalog-4(href="")
             p Услуги
-          .block-catalog-5
-            a(href="")
+          a.block-catalog-5(href="")
             p автосервис
       .map
         .row-map
@@ -465,17 +460,12 @@ block content
           .click показать списком
         .list
           h1 Наши центры
-          .list-link-map.scroll-pane
-            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
-            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
-            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
-            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
-            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
-            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
-            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
-            .link-map Айвазовского, 2Ас2,АЗС "Роснефть"
+          #cityShop.list-link-map.scroll-pane
+            label(for="cities")
+            select#cities(name="cities")
+            ul#shops
         .map-widget
-          iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ace22685a1579759521be196ca5d2b78c71be7b3c67fda3cf342d44e79bde9550&amp;source=constructor")
+          #map
       .product-list
         h1 Мы рекомендуем
         .row-product-list-1 
@@ -487,136 +477,38 @@ block content
             p
               a(href="") показать все
         form.row-product-list-2(action="product.php", method="post")
-          .block-product-list
-            +icon('present')  
-            img(src="img/block-product-wheel.png", alt="")
-            p.name Kumho Ecowing ES01 KH27  
-            p.worth от 9180 ₽
-            a(href="")
-              +icon('like')
-            a(href="")  
-              +icon('chart')  
-            .number-hover
-              span.green
-              span.green
-              span.green
-              span.grey
-              p.text 27 шт.
-            p.worth-hover 9180 ₽
-            a.view-hover(href="card-tires-1.html") 
-              span Быстрый просмотр
-            .row-form
-              .input-group
-                input.button-minus(type="button", value="-")
-                input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
-                input.button-plus(type="button", value="+")
-              .add-cart
-                button(type="submit")
-                  +icon('add-cart') 
-          .block-product-list
-            +icon('present')  
-            img(src="img/block-product-wheel.png", alt="")
-            p.name Kumho Ecowing ES01 KH27  
-            p.worth от 9180 ₽
-            a(href="")
-              +icon('like')
-            a(href="")  
-              +icon('chart')  
-            .number-hover
-              span.green
-              span.green
-              span.green
-              span.grey
-              p.text 27 шт.
-            p.worth-hover 9180 ₽
-            a.view-hover(href="card-tires-1.html") 
-              span Быстрый просмотр
-            .row-form
-              .input-group
-                input.button-minus(type="button", value="-")
-                input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
-                input.button-plus(type="button", value="+")
-              .add-cart
-                button(type="submit")
-                  +icon('add-cart') 
-          .block-product-list
-            +icon('present')  
-            img(src="img/block-product-wheel.png", alt="")
-            p.name Kumho Ecowing ES01 KH27  
-            p.worth от 9180 ₽
-            a(href="")
-              +icon('like')
-            a(href="")  
-              +icon('chart')  
-            .number-hover
-              span.green
-              span.green
-              span.green
-              span.grey
-              p.text 27 шт.
-            p.worth-hover 9180 ₽
-            a.view-hover(href="card-tires-1.html") 
-              span Быстрый просмотр
-            .row-form
-              .input-group
-                input.button-minus(type="button", value="-")
-                input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
-                input.button-plus(type="button", value="+")
-              .add-cart
-                button(type="submit")
-                  +icon('add-cart') 
-          .block-product-list
-            +icon('present')  
-            img(src="img/block-product-wheel.png", alt="")
-            p.name Kumho Ecowing ES01 KH27  
-            p.worth от 9180 ₽
-            a(href="")
-              +icon('like')
-            a(href="")  
-              +icon('chart')  
-            .number-hover
-              span.green
-              span.green
-              span.green
-              span.grey
-              p.text 27 шт.
-            p.worth-hover 9180 ₽
-            a.view-hover(href="card-tires-1.html") 
-              span Быстрый просмотр
-            .row-form
-              .input-group
-                input.button-minus(type="button", value="-")
-                input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
-                input.button-plus(type="button", value="+")
-              .add-cart
-                button(type="submit")
-                  +icon('add-cart') 
-          .block-product-list
-            +icon('present')  
-            img(src="img/block-product-wheel.png", alt="")
-            p.name Kumho Ecowing ES01 KH27  
-            p.worth от 9180 ₽
-            a(href="")
-              +icon('like')
-            a(href="")  
-              +icon('chart')  
-            .number-hover
-              span.green
-              span.green
-              span.green
-              span.grey
-              p.text 27 шт.
-            p.worth-hover 9180 ₽
-            a.view-hover(href="card-tires-1.html") 
-              span Быстрый просмотр
-            .row-form
-              .input-group
-                input.button-minus(type="button", value="-")
-                input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
-                input.button-plus(type="button", value="+")
-              .add-cart
-                button(type="submit")
-                  +icon('add-cart') 
+          mixin block-product-list
+            .block-product-list
+              +icon('present')  
+              img(src="img/block-product-wheel.png", alt="")
+              p.name Kumho Ecowing ES01 KH27  
+              p.worth от 9180 ₽
+              a(href="")
+                +icon('like')
+              a(href="")  
+                +icon('chart')  
+              .number-hover
+                span.green
+                span.green
+                span.green
+                span.grey
+                p.text 27 шт.
+              p.worth-hover 9180 ₽
+              a.view-hover(href="card-tires-1.html") 
+                span Быстрый просмотр
+              .row-form
+                .input-group
+                  input.button-minus(type="button", value="-")
+                  input.num-count(type="number", step="1", min="1", max="10", name="quantity", value="1")
+                  input.button-plus(type="button", value="+")
+                .add-cart
+                  button(type="submit")
+                    +icon('add-cart') 
+          +block-product-list
+          +block-product-list
+          +block-product-list
+          +block-product-list
+          +block-product-list
       .video
         .row-video-1
           .block-video
