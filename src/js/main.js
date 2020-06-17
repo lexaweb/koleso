@@ -62,6 +62,7 @@ $(function () {
     });
   });
 })(jQuery);
+<<<<<<< HEAD
 
 let select = function () {
   let selectHeader = document.querySelectorAll('.select__header');
@@ -71,6 +72,17 @@ let select = function () {
     item.addEventListener('click', selectToggle);
   });
 
+=======
+
+let select = function () {
+  let selectHeader = document.querySelectorAll('.select__header');
+  let selectItem = document.querySelectorAll('.select__item');
+
+  selectHeader.forEach((item) => {
+    item.addEventListener('click', selectToggle);
+  });
+
+>>>>>>> c7378db041aef6f512d8f52c8f836fa869edbbce
   selectItem.forEach((item) => {
     item.addEventListener('click', selectChoose);
   });
@@ -240,16 +252,20 @@ $(document).ready(function () {
     if (this.value.match(/[^0-9]/g)) {
       this.value = this.value.replace(/[^0-9]/g, '');
     }
+<<<<<<< HEAD
   });
 });
 
 $(document).ready(function () {
   $('.hidden').click(function () {
     $('.regulation').slideToggle();
+=======
+>>>>>>> c7378db041aef6f512d8f52c8f836fa869edbbce
   });
 });
 
 $(document).ready(function () {
+<<<<<<< HEAD
   $('.block-inf-product-mobile').click(function () {
     $(this).toggleClass('active').children('.dropdown').slideToggle();
   });
@@ -345,4 +361,15 @@ $(document).on('click', '#shops li', function () {
     var shopId = $(this).val();
 
     placemarkList[cityId][shopId].events.fire('click');
+=======
+  $('.hidden').click(function () {
+    $('.regulation').slideToggle();
+  });
+});
+
+$(document).ready(function () {
+  $('.block-inf-product-mobile').click(function () {
+    $(this).toggleClass('active').children('.dropdown').slideToggle();
+  });
+>>>>>>> c7378db041aef6f512d8f52c8f836fa869edbbce
 });
