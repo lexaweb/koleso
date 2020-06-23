@@ -596,11 +596,12 @@
     }
   }
 }
-.product-list.card-tires-1 {
+.product-list.card-tires {
   margin-bottom: 10px;
   overflow-y: unset;
   width: 100%;
   .row-product-list-2 {
+    overflow-y: unset;
     width: 100%;
     height: auto;
     flex-wrap: wrap;

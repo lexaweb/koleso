@@ -460,10 +460,12 @@ block content
           .click показать списком
         .list
           h1 Наши центры
-          #cityShop.list-link-map.scroll-pane
-            label(for="cities")
-            select#cities(name="cities")
-            ul#shops
+          .wrapper
+            #container.container
+              .list-link-map
+                label(for="cities")
+                select#cities(name="cities")
+                ul#shops
         #map(style="width: 100%; height: 380px;")
       .product-list
         h1 Мы рекомендуем
