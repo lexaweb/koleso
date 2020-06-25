@@ -12,6 +12,12 @@ body {
   .wrapper {
     .inner {
       max-width: 1140px;
+      @include media-laptop {
+        max-width: 1000px;
+      }
+      @include media-tablet-horizontal {
+        max-width: 768px;
+      }
       // calculator
       .tooltip {
         position: relative;

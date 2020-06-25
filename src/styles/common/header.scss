@@ -781,6 +781,40 @@
   .hamburger-mobile-menu.active {
     overflow: hidden;
   }
+  .nav-bottom-menu-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 10;
+    display: none;
+    @include media-tablet {
+      display: flex;
+    }
+    a {
+      text-align: center;
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 6px;
+      }
+      p {
+        font: 400 11px/12px $font;
+        color: #6e6e6e;
+        transition: 0.3s;
+      }
+      &:hover {
+        p {
+          color: #e22f22;
+        }
+      }
+    }
+  }
 }
 
 @include media-laptop {
