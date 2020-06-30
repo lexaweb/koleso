@@ -545,4 +545,16 @@ $(document).on('click', '#shops li', function () {
   window.onload = function() {
     ssb.scrollbar('container'); // scrollbar initialization
   }
+
+  
+$(function(){
+    $(window).scroll(function() {
+        if($(this).scrollTop() >= 103) {
+            $('.header').addClass('active');
+        }
+        else{
+            $('.header').removeClass('active');
+        }
+    });
+});
   

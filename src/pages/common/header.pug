@@ -88,6 +88,9 @@ header.header
           span.line
     .bottom-header
       .container
+        .logo
+          a(href="index.html")
+            +icon('logo')
         .item-bottom-header
           a(href="index-tires.html") шины
           .bottom-dropdown
@@ -196,6 +199,17 @@ header.header
           button(type="submit")
             +icon('white')
             +icon('black')
+        .item 
+          .compare
+            a(href="/")
+              +icon('compare')
+          .heart
+            a(href="/")
+              +icon('heart')
+          .shopping-cart
+            a(href="/")
+              +icon('shopping-cart')
+              span 4
     .hamburger-mobile-menu   
       .hamburger-mobile-menu-block-h1
         .text МЕНЮ
