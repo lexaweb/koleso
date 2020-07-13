@@ -1,0 +1,294 @@
+@import '../mixins/media';
+
+.breadcrumb.zapis-5 {
+  @include media-laptop {
+    width: 98%;
+    margin: 25px auto 20px auto;
+  }
+  @include media-tablet {
+    width: 98%;
+  }
+  @include media-mobile {
+    width: 98%;
+  }
+}
+.head-zapis-5 {
+  font: 400 29px/33px $font;
+  color: #222;
+  margin-bottom: 40px;
+  @include media-laptop {
+    width: 98%;
+    margin: 0 auto 40px auto;
+  }
+  @include media-tablet-horizontal {
+    width: 98%;
+    margin: 0 auto 40px auto;
+  }
+  @include media-tablet {
+    font: 400 18px/23px $font;
+  }
+  @include media-mobile {
+    width: 98%;
+    margin: 0 auto 20px auto;
+  }
+}
+.container-zapis-5 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include media-laptop {
+    width: 98%;
+    margin: 0 auto;
+  }
+  @include media-tablet {
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+  }
+  .col-1 {
+    margin-right: 25px;
+    @include media-tablet-horizontal {
+      margin-right: 0;
+    }
+    .text-1,
+    .text-2,
+    .text-3 {
+      font: 400 13px/22px $font;
+      color: #555;
+      margin-bottom: 20px;
+      h2 {
+        font: 400 24px/33px $font;
+        color: #222;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      ul {
+        margin-bottom: 20px;
+        li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 5px;
+          &::after {
+            content: '\2014';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 20px;
+            color: #555;
+            padding: 0;
+            margin-left: 0;
+            vertical-align: top;
+            zoom: 1;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      ol {
+        margin-left: 10px;
+        margin-bottom: 20px;
+        @include media-tablet {
+          padding-left: 10px;
+        }
+        li {
+          margin-bottom: 5px;
+          padding-left: 10px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .subscribe {
+      display: inline-block;
+      font: 700 15px/23px $font;
+      color: #fff;
+      padding: 17px 42px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      border: 1px solid #e22f22;
+      background: #e22f22;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background: #fff;
+        color: #e22f22;
+      }
+    }
+    .block-img {
+      margin-bottom: 20px;
+    }
+    .block-video {
+      margin-bottom: 20px;
+      iframe {
+        width: 560px;
+        height: 315px;
+        border: none;
+        @include media-tablet-horizontal {
+          width: 100%;
+          height: 400px;
+        }
+        @include media-tablet {
+          height: 300px;
+        }
+        @include media-mobile {
+          height: 200px;
+        }
+      }
+    }
+    .galerys {
+      margin-bottom: 20px;
+      border-top: 1px solid #e5e5e5;
+      p {
+        font: 400 14px/22px $font;
+        color: #555;
+        margin: 20px 0;
+      }
+      &-row {
+        display: flex;
+        align-items: center;
+        a {
+          display: inline-block;
+          margin-right: 20px;
+          transition: 0.3s;
+          &:last-child {
+            margin-right: 0;
+          }
+          img {
+            width: auto;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+  .col-2 {
+    min-width: 234px;
+    width: 234px;
+    @include media-tablet-horizontal {
+      display: none;
+    }
+    .menu {
+      border: 1px solid #e5e5e5;
+      border-radius: 3px;
+      margin-bottom: 25px;
+      a {
+        display: block;
+        font: 400 13px/22px $font;
+        color: #222;
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+        border-left: 3px solid transparent;
+        padding: 12px 31px 12px 14px;
+        transition: 0.3s;
+        &:hover {
+          color: #e22f22;
+          border-left: 3px solid #e22f22;
+        }
+        &:last-child {
+          border: none;
+          border-left: 3px solid transparent;
+          &:hover {
+            border-left: 3px solid #e22f22;
+          }
+        }
+      }
+      a.active {
+        color: #fff;
+        background: #e22f22;
+      }
+    }
+    .question {
+      padding: 48px 25px 20px;
+      background: #f9f9fa;
+      margin-bottom: 25px;
+      border: 1px solid #f5f5f5;
+      &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        svg {
+          width: 88px;
+          height: 80px;
+        }
+      }
+      &-text {
+        font: 400 13px/22px $font;
+        color: #222;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      &-button {
+        text-align: center;
+        a {
+          display: inline-block;
+          font: 400 13px/22px $font;
+          color: #e22f22;
+          padding: 10px 15px;
+          border: 1px solid #e22f22;
+          border-radius: 5px;
+          background: #fff;
+          transition: 0.3s;
+          &:hover {
+            color: #fff;
+            background: #e22f22;
+          }
+        }
+      }
+    }
+    .news {
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      margin-bottom: 25px;
+      .news-item-row {
+        &-1 {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding: 20px 20px 0 20px;
+          p {
+            font: 400 15px/22px $font;
+            color: #222;
+            a {
+              font: 400 15px/22px $font;
+              color: #e22f22;
+              transition: 0.3s;
+              &:hover {
+                color: #222;
+              }
+            }
+          }
+        }
+        &-2 {
+          font: 400 13px/22px $font;
+          color: #222;
+          padding: 20px;
+          border-bottom: 1px solid #e5e5e5;
+          &:last-child {
+            border-bottom: none;
+          }
+          &-text {
+            a {
+              transition: 0.3s;
+              &:hover {
+                color: #e22f22;
+              }
+            }
+          }
+          &-data {
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+}

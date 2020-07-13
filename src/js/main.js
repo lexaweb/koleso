@@ -2,13 +2,17 @@ import $ from 'jquery';
 import '@fancyapps/fancybox';
 import Swiper from 'swiper';
 import '../js/libs/ui.js';
-import '../js/libs/mousewheel.js';
+// import '../js/libs/mousewheel.js';
 // import '../js/libs/jScrollPane.js';
 
-$(function () {
-  $('.scroll-pane').jScrollPane({
-    showArrows: false,
-  });
+// $(function () {
+//   $('.scroll-pane').jScrollPane({
+//     showArrows: false,
+//   });
+// });
+
+$(document).ready(function() {
+  $(".fancybox").fancybox();
 });
 
 var menu = ['1', '2', '3', '4'];
@@ -256,12 +260,12 @@ $(document).ready(function () {
 });
 
 
-var myMap;
-var placemarkCollections = {};
-var placemarkList = {};
+  var myMap;
+  var placemarkCollections = {};
+  var placemarkList = {};
 
-// Список городов и магазинов в них
-var shopList = [
+     // Список городов и магазинов в них
+  var shopList = [
     {
         'cityName': 'Москва',
         'shops': [
@@ -282,83 +286,87 @@ var shopList = [
         ]
     }
 ];
-
 ymaps.ready(init);
 
-function init() {
 
+function init() {
     // Создаем карту
-    myMap = new ymaps.Map("map", {
+    if ("map") {
+
+
+
+      myMap = new ymaps.Map("map", {
         center: [56, 37],
         zoom: 8,
         controls: [
             'zoomControl'
         ],
-        zoomMargin: [20]
-    });
+      zoomMargin: [20]
+    }); 
 
-    for (var i = 0; i < shopList.length; i++) {
+    
+    
+  for (var i = 0; i < shopList.length; i++) {
 
-        // Добавляем название города в выпадающий список
-        $('select#cities').append('<option value="' + i + '">' + shopList[i].cityName + '</option>');
+      // Добавляем название города в выпадающий список
+      $('select#cities').append('<option value="' + i + '">' + shopList[i].cityName + '</option>');
 
-        // Создаём коллекцию меток для города
-        var cityCollection = new ymaps.GeoObjectCollection();
+      // Создаём коллекцию меток для города
+      var cityCollection = new ymaps.GeoObjectCollection();
 
-        for (var c = 0; c < shopList[i].shops.length; c++) {
-            var shopInfo = shopList[i].shops[c];
+      for (var c = 0; c < shopList[i].shops.length; c++) {
+          var shopInfo = shopList[i].shops[c];
 
-            var shopPlacemark = new ymaps.Placemark(
-                shopInfo.coordinates,
-                {
-                    hintContent: shopInfo.name,
-                    balloonContent: shopInfo.name
-                }
-            );
+          var shopPlacemark = new ymaps.Placemark(
+              shopInfo.coordinates,
+              {
+                  hintContent: shopInfo.name,
+                  balloonContent: shopInfo.name
+              }
+          );
 
-            if (!placemarkList[i]) placemarkList[i] = {};
-            placemarkList[i][c] = shopPlacemark;
+          if (!placemarkList[i]) placemarkList[i] = {};
+          placemarkList[i][c] = shopPlacemark;
 
-            // Добавляем метку в коллекцию
-            cityCollection.add(shopPlacemark);
+          // Добавляем метку в коллекцию
+          cityCollection.add(shopPlacemark);
 
-        }
+      }
 
-        placemarkCollections[i] = cityCollection;
+      placemarkCollections[i] = cityCollection;
 
-        // Добавляем коллекцию на карту
-        myMap.geoObjects.add(cityCollection);
+      // Добавляем коллекцию на карту
+      myMap.geoObjects.add(cityCollection);
 
-    }
+  }
 
-    $('select#cities').trigger('change');
+  $('select#cities').trigger('change');
 }
-
-
+}
 // Переключение города
 $(document).on('change', $('select#city'), function () {
-    var cityId = $('select#cities').val();
+  var cityId = $('select#cities').val();
 
-    // Масштабируем и выравниваем карту так, чтобы были видны метки для выбранного города
-    myMap.setBounds(placemarkCollections[cityId].getBounds(), {checkZoomRange:true}).then(function(){
-        if(myMap.getZoom() > 15) myMap.setZoom(15); // Если значение zoom превышает 15, то устанавливаем 15.
-    });
+  // Масштабируем и выравниваем карту так, чтобы были видны метки для выбранного города
+  myMap.setBounds(placemarkCollections[cityId].getBounds(), {checkZoomRange:true}).then(function(){
+      if(myMap.getZoom() > 15) myMap.setZoom(15); // Если значение zoom превышает 15, то устанавливаем 15.
+  });
 
-    $('#shops').html('');
-    for (var c = 0; c < shopList[cityId].shops.length; c++) {
-        $('#shops').append('<li value="' + c + '">' + shopList[cityId].shops[c].name + '</li>');
-    }
+  $('#shops').html('');
+  for (var c = 0; c < shopList[cityId].shops.length; c++) {
+      $('#shops').append('<li value="' + c + '">' + shopList[cityId].shops[c].name + '</li>');
+  }
 
 });
 
 // Клик на адрес
 $(document).on('click', '#shops li', function () {
 
-    var cityId = $('select#cities').val();
-    var shopId = $(this).val();
+  var cityId = $('select#cities').val();
+  var shopId = $(this).val();
 
-    placemarkList[cityId][shopId].events.fire('click');
-  });
+  placemarkList[cityId][shopId].events.fire('click');
+});
 
   var ssb = {
     aConts  : [],
@@ -368,7 +376,6 @@ $(document).on('click', '#shops li', function () {
     sc : 0,
     sp : 0,
     to : 0,
-    
     // constructor
     scrollbar : function (cont_id) {
       var cont = document.getElementById(cont_id);
@@ -387,7 +394,7 @@ $(document).on('click', '#shops li', function () {
       // adding new container into array
       ssb.aConts[ssb.N++] = cont;
       
-      cont.sg = false;
+       cont.sg = false;
       
       //creating scrollbar child elements
       cont.st = this.create_div('ssb_st', cont, cont_clone);
@@ -538,7 +545,7 @@ $(document).on('click', '#shops li', function () {
       if (ssb.asd) ssb.asd.sb.className = (tg.className.indexOf('scrollbar') > 0) ? 'ssb_sb ssb_sb_over' : 'ssb_sb';
       document.onselectstart = '';
       ssb.clear();
-      ssb.asd.sg = false;
+      // ssb.asd.sg = false;
     }
   }
   
@@ -546,7 +553,6 @@ $(document).on('click', '#shops li', function () {
     ssb.scrollbar('container'); // scrollbar initialization
   }
 
-  
 $(function(){
     $(window).scroll(function() {
         if($(this).scrollTop() >= 103) {
