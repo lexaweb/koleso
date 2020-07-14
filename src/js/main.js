@@ -257,6 +257,7 @@ $(document).ready(function () {
   $('.block-inf-product-mobile').click(function () {
     $(this).toggleClass('active').children('.dropdown').slideToggle();
   });
+
 });
 
 
@@ -286,63 +287,64 @@ $(document).ready(function () {
         ]
     }
 ];
-ymaps.ready(init);
+ 
+if ($('.map').length) {
+  ymaps.ready(init);
 
-
-function init() {
-    // Создаем карту
-    if ("map") {
-
-
-
-      myMap = new ymaps.Map("map", {
-        center: [56, 37],
-        zoom: 8,
-        controls: [
-            'zoomControl'
-        ],
-      zoomMargin: [20]
-    }); 
-
-    
-    
-  for (var i = 0; i < shopList.length; i++) {
-
-      // Добавляем название города в выпадающий список
-      $('select#cities').append('<option value="' + i + '">' + shopList[i].cityName + '</option>');
-
-      // Создаём коллекцию меток для города
-      var cityCollection = new ymaps.GeoObjectCollection();
-
-      for (var c = 0; c < shopList[i].shops.length; c++) {
-          var shopInfo = shopList[i].shops[c];
-
-          var shopPlacemark = new ymaps.Placemark(
-              shopInfo.coordinates,
-              {
-                  hintContent: shopInfo.name,
-                  balloonContent: shopInfo.name
-              }
-          );
-
-          if (!placemarkList[i]) placemarkList[i] = {};
-          placemarkList[i][c] = shopPlacemark;
-
-          // Добавляем метку в коллекцию
-          cityCollection.add(shopPlacemark);
-
-      }
-
-      placemarkCollections[i] = cityCollection;
-
-      // Добавляем коллекцию на карту
-      myMap.geoObjects.add(cityCollection);
-
+  function init() {
+      // Создаем карту
+  
+        myMap = new ymaps.Map("map", {
+          center: [56, 37],
+          zoom: 8,
+          controls: [
+              'zoomControl'
+          ],
+        zoomMargin: [20]
+      }); 
+  
+      
+      
+    for (var i = 0; i < shopList.length; i++) {
+  
+        // Добавляем название города в выпадающий список
+        $('select#cities').append('<option value="' + i + '">' + shopList[i].cityName + '</option>');
+  
+        // Создаём коллекцию меток для города
+        var cityCollection = new ymaps.GeoObjectCollection();
+  
+        for (var c = 0; c < shopList[i].shops.length; c++) {
+            var shopInfo = shopList[i].shops[c];
+  
+            var shopPlacemark = new ymaps.Placemark(
+                shopInfo.coordinates,
+                {
+                    hintContent: shopInfo.name,
+                    balloonContent: shopInfo.name
+                }
+            );
+  
+            if (!placemarkList[i]) placemarkList[i] = {};
+            placemarkList[i][c] = shopPlacemark;
+  
+            // Добавляем метку в коллекцию
+            cityCollection.add(shopPlacemark);
+  
+        }
+  
+        placemarkCollections[i] = cityCollection;
+  
+        // Добавляем коллекцию на карту
+        myMap.geoObjects.add(cityCollection);
+  
+    }
+  
+    $('select#cities').trigger('change');
   }
 
-  $('select#cities').trigger('change');
 }
-}
+
+
 // Переключение города
 $(document).on('change', $('select#city'), function () {
   var cityId = $('select#cities').val();
@@ -367,6 +369,8 @@ $(document).on('click', '#shops li', function () {
 
   placemarkList[cityId][shopId].events.fire('click');
 });
+
+if ($('#container').length) {
 
   var ssb = {
     aConts  : [],
@@ -548,11 +552,11 @@ $(document).on('click', '#shops li', function () {
       // ssb.asd.sg = false;
     }
   }
-  
+
   window.onload = function() {
     ssb.scrollbar('container'); // scrollbar initialization
   }
-
+  }
 $(function(){
     $(window).scroll(function() {
         if($(this).scrollTop() >= 103) {
