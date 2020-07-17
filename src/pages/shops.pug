@@ -2,19 +2,80 @@ extends common/layout
 block variables
   -var pageTitle ='shops'
 
-    //- -
-    //-   var menu =[
-    //-     {link: 'Замена тормозных колодок, дисков, барабанов'},
-    //-     {link: 'Комплексная диагностика "Исправный автомобиль"'},
-    //-     {link: 'Заправка кондиционера'},
-    //-     {link: 'Ходовая часть'},
-    //-     {link: 'Рулевое управление'},
-    //-     {link: 'Замена ГРМ'},
-    //-     {link: 'Замена сцепления'},
-    //-     {link: 'Замена топливного фильтра'},
-    //-     {link: 'Регламентное ТО'}]
-    //-     each a in menu
-    //-           a(href="/")=a.link
+    -
+      var list =[
+        {img: 'img/shops-1.jpg', 
+        address: 'Димитрова, 100Б', 
+        time1: 'пн-пт: 09:00–20:00',
+        time2: 'сб: 09:00–18:00',
+        time3: 'вск: 09:00–18:00',
+        phonetel: 'tel:8(473)233-04-29',
+        phone: '8(473)233-04-29',
+        mailto: 'mailto:shop36201@koleso.ru',
+        mail: 'shop36201@koleso.ru'
+        },
+         {img: 'img/shops-2.jpg', 
+        address: 'проспект Патриотов, 23Б', 
+        time1: 'пн-пт: 09:00–20:00',
+        time2: 'сб: 09:00–18:00',
+        time3: 'вск: 09:00–18:00',
+        phonetel: 'tel:8(473)270-16-34',
+        phone: '8(473)270-16-34',
+        mailto: 'mailto:shop36203@koleso.ru',
+        mail: 'shop36203@koleso.ru'
+        },
+         {img: 'img/shops-3.jpg', 
+        address: 'Планетная, 26', 
+        time1: 'пн-пт: 09:00–20:00',
+        time2: 'сб: 09:00–18:00',
+        time3: 'вск: 09:00–18:00',
+        phonetel: 'tel:+7(473)291-21-91',
+        phone: '+7(473)291-21-91',
+        mailto: 'mailto:shop36105@koleso.ru',
+        mail: 'shop36105@koleso.ru'
+        },
+         {img: 'img/shops-4.jpg', 
+        address: 'Урицкого, 37', 
+        time1: 'пн-пт: 09:00–20:00',
+        time2: 'сб: 09:00–18:00',
+        time3: 'вск: 09:00–18:00',
+        phonetel: 'tel:8(473)278-53-45',
+        phone: '8(473)278-53-45',
+        mailto: 'mailto:shop36204@koleso.ru',
+        mail: 'shop36204@koleso.ru'
+        },
+         {img: 'img/shops-5.jpg', 
+        address: 'Чебышева, 24А', 
+        time1: 'пн-пт: 09:00–20:00',
+        time2: 'сб: 09:00–18:00',
+        time3: 'вск: 09:00–18:00',
+        phonetel: 'tel:8(473)244-53-53',
+        phone: '8(473)244-53-53',
+        mailto: 'mailto:shop36212@koleso.ru',
+        mail: 'shop36212@koleso.ru'
+        }]
+
+    -
+      var services =[
+        {link: 'Замена тормозных колодок, дисков, барабанов'},
+        {link: 'Комплексная диагностика "Исправный автомобиль"'},
+        {link: 'Заправка кондиционера'},
+        {link: 'Легковой шиномонтаж'},
+        {link: 'Правка дисков'},
+        {link: 'Антибактериальная обработка салона автомобиля'},
+        {link: 'Шиномонтаж'},
+        {link: 'Автосервис'},
+        {link: 'Ремонт и покраска дисков'},
+        {link: 'Ходовая часть'},
+        {link: 'Грузовой шиномонтаж'},
+        {link: 'Рулевое управление'},
+        {link: 'Замена ГРМ'},
+        {link: 'Сезонное хранение колес'},
+        {link: 'Замена сцепления'},
+        {link: 'Замена топливного фильтра'},
+        {link: 'Регламентное ТО'}
+        ]
+
 block content
   main
     .inner 
@@ -22,16 +83,41 @@ block content
         a(href="") Главная 
         p – Шинные и сервисные центры
       h2.head-shops Шинные и сервисные центры
-      .map
-        .row-map
-          h1 Наши центры
-          .click показать списком
-        .list
-          h1 Наши центры
-          .wrapper
-            #container.container
-              .list-link-map
-                label(for="cities")
-                select#cities(name="cities")
-                ul#shops
+      .map.shops
         #map(style="width: 100%; height: 380px;")
+      .nearest-shop
+        a(href="/") Показать ближайший магазин
+      .shops-list
+        each item in list
+          .shops-list-item
+            .block-left
+              .img
+                a(href="/")
+                  img(src=item.img, alt=item.address)
+              .address
+                a(href="/")=item.address
+            .block-right
+              .work-time
+                p=item.time1
+                p=item.time2
+                p=item.time3
+              .contacts
+                a(href=item.phonetel)=item.phone
+                a(href=item.mailto)=item.mail
+      .type
+        h3 В наших центрах вы можете приобрести:
+        ul
+          li шины: 
+            a(href="/") зимние
+            | , 
+            a(href="/") летние
+          li диски: 
+            a(href="/") литые
+            | , 
+            a(href="/") штампованные
+      .services
+        h3 В наших центрах вы можете получить услуги:
+        ul
+          each link in services
+            li 
+              a(href="/")=link.link

@@ -32,3 +32,140 @@
     margin: 0 auto 20px auto;
   }
 }
+.map.shops {
+  border: none;
+}
+.nearest-shop {
+  @include media-tablet {
+    width: 98%;
+    margin: 40px auto 40px auto;
+  }
+  a {
+    display: inline-block;
+    font: 700 15px/23px $font;
+    color: #fff;
+    border: 1px solid #e22f22;
+    background: #e22f22;
+    border-radius: 5px;
+    padding: 10px 42px;
+    transition: 0.3s;
+    margin: 40px 0 40px 0;
+    &:hover {
+      background: #fff;
+      color: #e22f22;
+    }
+  }
+}
+.shops-list {
+  margin-bottom: 40px;
+  @include media-tablet {
+    width: 98%;
+    margin: 0 auto 40px auto;
+  }
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 -1px;
+    padding: 30px;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s;
+    @include media-tablet {
+      flex-wrap: wrap;
+    }
+    &:hover {
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    }
+    .block-left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include media-tablet {
+        flex-wrap: wrap;
+      }
+      .img {
+        @include media-tablet {
+          display: none;
+        }
+        a {
+          img {
+            width: 150px;
+            height: 84px;
+          }
+        }
+      }
+      .address {
+        margin: 0;
+        @include media-tablet {
+          width: 100%;
+        }
+        a {
+          font: 400 15px/23px $font;
+          color: #e22f22;
+          margin-left: 25px;
+          transition: 0.3s;
+          @include media-tablet {
+            width: 200px;
+            margin: 0;
+          }
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+    .block-right {
+      display: flex;
+      width: 40%;
+      justify-content: space-between;
+      align-items: center;
+      @include media-tablet {
+        flex-wrap: wrap;
+      }
+      .work-time {
+        font: 400 13px/23px $font;
+        color: #555;
+      }
+      .contacts {
+        a {
+          font: 400 13px/23px $font;
+          color: #e22f22;
+          transition: 0.3s;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}
+.type, .services {
+  margin-bottom: 40px;
+  @include media-tablet {
+    width: 98%;
+    margin: 0 auto 40px auto;
+  }
+  h3 {
+    font: 400 24px/23px $font;
+    color: #222;
+    margin-bottom: 25px;
+  }
+  ul {
+    li {
+      font: 400 15px/23px $font;
+      color: #555;
+      &::before {
+        content: "\2014";
+        color: #555;
+      }
+        a {
+          display: inline-block;
+          color: #e22f22;
+          transition: 0.3s;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+    }
+  }
+}
