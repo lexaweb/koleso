@@ -55,7 +55,7 @@
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
     "prettier": "^2.0.5",
-    "swiper": "^5.3.6",
+    "swiper": "^6.5.1",
     "yarn": "^1.22.4"
   },
   "bugs": {
